@@ -11,12 +11,25 @@
 		3474AC17FB8D4AB0AB0401FD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB33DAA41C449B98E32AD49 /* MockData.swift */; };
 		48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F56501413E34386A09B826D /* PageView.swift */; };
 		539A8C189E194092B2062B96 /* TANDAInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD829BAE84196A13F68DC /* TANDAInput.swift */; };
-		6ADD737B2F38144C00C478EA /* TANDADivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD737A2F38144C00C478EA /* TANDADivider.swift */; };
-		6ADD737D2F38146200C478EA /* TANDAAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD737C2F38146200C478EA /* TANDAAuthButton.swift */; };
-		6ADD73842F392F8700C478EA /* SignUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD73832F392F8700C478EA /* SignUpSheet.swift */; };
-		6ADD73852F392F8700C478EA /* OnboardingSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD73822F392F8700C478EA /* OnboardingSplash.swift */; };
+		6A2C7F802F3955C900BA430D /* TANDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F792F3955C900BA430D /* TANDAApp.swift */; };
+		6A2C7F812F3955C900BA430D /* LegalStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F712F3955C900BA430D /* LegalStep.swift */; };
+		6A2C7F822F3955C900BA430D /* NameStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F722F3955C900BA430D /* NameStep.swift */; };
+		6A2C7F832F3955C900BA430D /* PasswordStrengthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */; };
+		6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */; };
+		6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F772F3955C900BA430D /* PhotoStep.swift */; };
+		6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F782F3955C900BA430D /* SignUpSheet.swift */; };
+		6A2C7F872F3955C900BA430D /* TANDADivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7D2F3955C900BA430D /* TANDADivider.swift */; };
+		6A2C7F882F3955C900BA430D /* CreatePasswordStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */; };
+		6A2C7F892F3955C900BA430D /* OnboardingContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */; };
+		6A2C7F8A2F3955C900BA430D /* TANDAAuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7A2F3955C900BA430D /* TANDAAuthButton.swift */; };
+		6A2C7F8B2F3955C900BA430D /* PasswordLoginSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F752F3955C900BA430D /* PasswordLoginSheet.swift */; };
+		6A2C7F8C2F3955C900BA430D /* CelebrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */; };
+		6A2C7F8D2F3955C900BA430D /* OnboardingSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F742F3955C900BA430D /* OnboardingSplash.swift */; };
+		6A2C7F8E2F3955C900BA430D /* TANDACheckbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7C2F3955C900BA430D /* TANDACheckbox.swift */; };
+		6A2C7F8F2F3955C900BA430D /* TANDAOTPInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7E2F3955C900BA430D /* TANDAOTPInput.swift */; };
+		6A2C7F902F3955C900BA430D /* TANDAProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7F2F3955C900BA430D /* TANDAProgressBar.swift */; };
+		6A2C7F912F3955C900BA430D /* TANDAAvatarUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7B2F3955C900BA430D /* TANDAAvatarUpload.swift */; };
 		700749B64A1A47D09F5D8D06 /* TANDAButtonDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2577A0ECE7419C813B4142 /* TANDAButtonDock.swift */; };
-		7A153847960B46AF81F15300 /* TANDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC8FF739264456DBE060C86 /* TANDAApp.swift */; };
 		89D935A24E7141BA88FE386C /* TANDAColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CC99DF434FB48AFC529B /* TANDAColors.swift */; };
 		A154B6B2E59746089F48DB30 /* TANDATypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB550B48AE4FF7B8871627 /* TANDATypography.swift */; };
 		B85431870C20468EBE1FCBAB /* TANDARadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942F3B0CA774E5A8A72F55D /* TANDARadius.swift */; };
@@ -34,11 +47,24 @@
 		2942F3B0CA774E5A8A72F55D /* TANDARadius.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDARadius.swift; sourceTree = "<group>"; };
 		3B30E076D4DF4E73881842CF /* TANDASheetHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDASheetHeader.swift; sourceTree = "<group>"; };
 		46FB550B48AE4FF7B8871627 /* TANDATypography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDATypography.swift; sourceTree = "<group>"; };
-		4EC8FF739264456DBE060C86 /* TANDAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAApp.swift; sourceTree = "<group>"; };
-		6ADD737A2F38144C00C478EA /* TANDADivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDADivider.swift; sourceTree = "<group>"; };
-		6ADD737C2F38146200C478EA /* TANDAAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAAuthButton.swift; sourceTree = "<group>"; };
-		6ADD73822F392F8700C478EA /* OnboardingSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSplash.swift; sourceTree = "<group>"; };
-		6ADD73832F392F8700C478EA /* SignUpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSheet.swift; sourceTree = "<group>"; };
+		6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
+		6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordStep.swift; sourceTree = "<group>"; };
+		6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationView.swift; sourceTree = "<group>"; };
+		6A2C7F712F3955C900BA430D /* LegalStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalStep.swift; sourceTree = "<group>"; };
+		6A2C7F722F3955C900BA430D /* NameStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameStep.swift; sourceTree = "<group>"; };
+		6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
+		6A2C7F742F3955C900BA430D /* OnboardingSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSplash.swift; sourceTree = "<group>"; };
+		6A2C7F752F3955C900BA430D /* PasswordLoginSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLoginSheet.swift; sourceTree = "<group>"; };
+		6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordStrengthBar.swift; sourceTree = "<group>"; };
+		6A2C7F772F3955C900BA430D /* PhotoStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStep.swift; sourceTree = "<group>"; };
+		6A2C7F782F3955C900BA430D /* SignUpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSheet.swift; sourceTree = "<group>"; };
+		6A2C7F792F3955C900BA430D /* TANDAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAApp.swift; sourceTree = "<group>"; };
+		6A2C7F7A2F3955C900BA430D /* TANDAAuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAAuthButton.swift; sourceTree = "<group>"; };
+		6A2C7F7B2F3955C900BA430D /* TANDAAvatarUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAAvatarUpload.swift; sourceTree = "<group>"; };
+		6A2C7F7C2F3955C900BA430D /* TANDACheckbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDACheckbox.swift; sourceTree = "<group>"; };
+		6A2C7F7D2F3955C900BA430D /* TANDADivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDADivider.swift; sourceTree = "<group>"; };
+		6A2C7F7E2F3955C900BA430D /* TANDAOTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAOTPInput.swift; sourceTree = "<group>"; };
+		6A2C7F7F2F3955C900BA430D /* TANDAProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAProgressBar.swift; sourceTree = "<group>"; };
 		6F56501413E34386A09B826D /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		7B515447A9B844B2A71ED1CB /* TANDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TANDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E49CCA0A594AA2AA73E24D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -149,11 +175,24 @@
 		C329120D2ED64C849C5ACDF2 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				4EC8FF739264456DBE060C86 /* TANDAApp.swift */,
-				6ADD73822F392F8700C478EA /* OnboardingSplash.swift */,
-				6ADD73832F392F8700C478EA /* SignUpSheet.swift */,
-				6ADD737A2F38144C00C478EA /* TANDADivider.swift */,
-				6ADD737C2F38146200C478EA /* TANDAAuthButton.swift */,
+				6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */,
+				6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */,
+				6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */,
+				6A2C7F712F3955C900BA430D /* LegalStep.swift */,
+				6A2C7F722F3955C900BA430D /* NameStep.swift */,
+				6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */,
+				6A2C7F742F3955C900BA430D /* OnboardingSplash.swift */,
+				6A2C7F752F3955C900BA430D /* PasswordLoginSheet.swift */,
+				6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */,
+				6A2C7F772F3955C900BA430D /* PhotoStep.swift */,
+				6A2C7F782F3955C900BA430D /* SignUpSheet.swift */,
+				6A2C7F792F3955C900BA430D /* TANDAApp.swift */,
+				6A2C7F7A2F3955C900BA430D /* TANDAAuthButton.swift */,
+				6A2C7F7B2F3955C900BA430D /* TANDAAvatarUpload.swift */,
+				6A2C7F7C2F3955C900BA430D /* TANDACheckbox.swift */,
+				6A2C7F7D2F3955C900BA430D /* TANDADivider.swift */,
+				6A2C7F7E2F3955C900BA430D /* TANDAOTPInput.swift */,
+				6A2C7F7F2F3955C900BA430D /* TANDAProgressBar.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -234,21 +273,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6ADD737B2F38144C00C478EA /* TANDADivider.swift in Sources */,
-				7A153847960B46AF81F15300 /* TANDAApp.swift in Sources */,
 				89D935A24E7141BA88FE386C /* TANDAColors.swift in Sources */,
 				DD6CED49006F4693B4AC87DD /* TANDASpacing.swift in Sources */,
 				B85431870C20468EBE1FCBAB /* TANDARadius.swift in Sources */,
 				A154B6B2E59746089F48DB30 /* TANDATypography.swift in Sources */,
-				6ADD73842F392F8700C478EA /* SignUpSheet.swift in Sources */,
-				6ADD73852F392F8700C478EA /* OnboardingSplash.swift in Sources */,
 				E2C74D2057E54E7DAF5A3199 /* TANDAButton.swift in Sources */,
 				539A8C189E194092B2062B96 /* TANDAInput.swift in Sources */,
-				6ADD737D2F38146200C478EA /* TANDAAuthButton.swift in Sources */,
 				48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */,
 				D25C4AA923F64179A24E4A67 /* TANDASheetHeader.swift in Sources */,
 				700749B64A1A47D09F5D8D06 /* TANDAButtonDock.swift in Sources */,
 				3474AC17FB8D4AB0AB0401FD /* MockData.swift in Sources */,
+				6A2C7F802F3955C900BA430D /* TANDAApp.swift in Sources */,
+				6A2C7F812F3955C900BA430D /* LegalStep.swift in Sources */,
+				6A2C7F822F3955C900BA430D /* NameStep.swift in Sources */,
+				6A2C7F832F3955C900BA430D /* PasswordStrengthBar.swift in Sources */,
+				6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */,
+				6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */,
+				6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */,
+				6A2C7F872F3955C900BA430D /* TANDADivider.swift in Sources */,
+				6A2C7F882F3955C900BA430D /* CreatePasswordStep.swift in Sources */,
+				6A2C7F892F3955C900BA430D /* OnboardingContainerView.swift in Sources */,
+				6A2C7F8A2F3955C900BA430D /* TANDAAuthButton.swift in Sources */,
+				6A2C7F8B2F3955C900BA430D /* PasswordLoginSheet.swift in Sources */,
+				6A2C7F8C2F3955C900BA430D /* CelebrationView.swift in Sources */,
+				6A2C7F8D2F3955C900BA430D /* OnboardingSplash.swift in Sources */,
+				6A2C7F8E2F3955C900BA430D /* TANDACheckbox.swift in Sources */,
+				6A2C7F8F2F3955C900BA430D /* TANDAOTPInput.swift in Sources */,
+				6A2C7F902F3955C900BA430D /* TANDAProgressBar.swift in Sources */,
+				6A2C7F912F3955C900BA430D /* TANDAAvatarUpload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

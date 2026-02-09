@@ -27,6 +27,8 @@ class AppState: ObservableObject {
 
     @Published var currentScreen: AppScreen = .onboardingSplash
     @Published var isOnboardingComplete: Bool = false
+    @Published var authEmail: String = ""
+    @Published var isExistingAccount: Bool = false
 
     func completeOnboarding() {
         withAnimation(.easeInOut(duration: 0.5)) {
@@ -35,10 +37,18 @@ class AppState: ObservableObject {
         }
     }
 
+    func startOnboarding() {
+        withAnimation(.easeInOut(duration: 0.4)) {
+            currentScreen = .onboarding
+        }
+    }
+
     func resetToSplash() {
         withAnimation {
             currentScreen = .onboardingSplash
             isOnboardingComplete = false
+            authEmail = ""
+            isExistingAccount = false
         }
     }
 }
@@ -55,7 +65,7 @@ struct RootView: View {
                 OnboardingSplash()
                     .transition(AnyTransition.opacity)
             case .onboarding:
-                OnboardingFlow()
+                OnboardingContainerView()
                     .transition(.move(edge: .trailing))
             case .home:
                 HomeScreen()

@@ -2,11 +2,12 @@ import SwiftUI
 
 // MARK: - OnboardingSplash
 // 3-slide full-bleed carousel shown on first app launch.
-// Swipe or tap to navigate, final slide opens Sign Up Sheet.
 
 struct OnboardingSplash: View {
     @State private var currentSlide = 0
     @State private var showSignUp = false
+    @State private var showEmailVerification = false
+    @State private var showPasswordLogin = false
     @EnvironmentObject var appState: AppState
 
     private let slides = [
@@ -17,23 +18,20 @@ struct OnboardingSplash: View {
 
     var body: some View {
         ZStack {
-            // Full-bleed gradient background
             LinearGradient(
                 colors: [
-                    Color(hex: "#8B5CF6"),  // Purple 500
-                    Color(hex: "#A855F7"),  // Purple 400
-                    Color(hex: "#F68896"),  // Coral 500
-                    Color(hex: "#D946EF"),  // Fuchsia
-                    Color(hex: "#31005C")   // Deep Purple 500
+                    Color(hex: "#8B5CF6"),
+                    Color(hex: "#A855F7"),
+                    Color(hex: "#F68896"),
+                    Color(hex: "#D946EF"),
+                    Color(hex: "#31005C")
                 ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
             .ignoresSafeArea()
 
-            // Content
             VStack(spacing: 0) {
-                // Carousel
                 TabView(selection: $currentSlide) {
                     ForEach(0..<slides.count, id: \.self) { index in
                         SlideView(headline: slides[index])
@@ -43,7 +41,6 @@ struct OnboardingSplash: View {
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .automatic))
 
-                // Button dock (transparent)
                 VStack {
                     TANDAButton("Get Started", kind: .primary, isFullWidth: true) {
                         showSignUp = true
@@ -54,14 +51,35 @@ struct OnboardingSplash: View {
             }
         }
         .sheet(isPresented: $showSignUp) {
-            SignUpSheet()
+            SignUpSheet(
+                onNewAccount: { email in
+                    appState.authEmail = email
+                    showSignUp = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showEmailVerification = true
+                    }
+                },
+                onExistingAccount: { email in
+                    appState.authEmail = email
+                    showSignUp = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showPasswordLogin = true
+                    }
+                }
+            )
+            .presentationDetents([.medium])
+            .presentationDragIndicator(.visible)
+        }
+        .sheet(isPresented: $showPasswordLogin) {
+            PasswordLoginSheet()
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
         }
+        .fullScreenCover(isPresented: $showEmailVerification) {
+            EmailVerificationView()
+        }
     }
 }
-
-// MARK: - SlideView
 
 struct SlideView: View {
     let headline: String
@@ -70,22 +88,18 @@ struct SlideView: View {
         VStack {
             HStack {
                 Text(headline)
-                    .font(TANDATypography.Display.m)  // 28pt Bold
+                    .font(TANDATypography.Display.m)
                     .foregroundStyle(.white)
                     .shadow(color: .black.opacity(0.3), radius: 20, y: 2)
                     .frame(maxWidth: 280, alignment: .leading)
-
                 Spacer()
             }
             .padding(.horizontal, 24)
-            .padding(.top, 60)  // Below status bar + spacing
-
+            .padding(.top, 60)
             Spacer()
         }
     }
 }
-
-// MARK: - Preview
 
 #Preview("OnboardingSplash") {
     OnboardingSplash()
