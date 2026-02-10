@@ -17,32 +17,25 @@ struct OnboardingContainerView: View {
     private let totalSteps = 4
 
     var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: TANDASpacing.md) {
-                Button {
-                    goBack()
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.system(size: 16, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(width: 32, height: 32)
-                }
-                .opacity(currentStep > 1 ? 1.0 : 0.3)
-                .disabled(currentStep <= 1)
-
+        SheetLayout(
+            type: .immersive,
+            title: "",
+            showLeftAction: true,
+            leftAction: { goBack() },
+            showRightAction: false
+        ) {
+            VStack(spacing: 0) {
                 ProgressBar(totalSteps: totalSteps, currentStep: currentStep)
+                    .padding(.horizontal, TANDASpacing.lg)
+                    .padding(.bottom, TANDASpacing.lg)
+
+                stepContent
+
+                Spacer()
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, TANDASpacing.md)
-
-            stepContent
-                .padding(.top, TANDASpacing.md)
-
-            Spacer()
-
+        } footer: {
             buttonDock
         }
-        .background(TANDAColors.Neutral.n900)
     }
 
     @ViewBuilder

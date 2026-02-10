@@ -20,7 +20,7 @@ struct PhotoStep: View {
         VStack(spacing: 0) {
             Text("Add a Photo")
                 .font(TANDATypography.Heading.l)
-                .foregroundStyle(.white)
+                .foregroundStyle(TANDAColors.Text.primary)
                 .padding(.bottom, TANDASpacing.xs)
 
             Text("Help your friends recognize you in circles.")
@@ -49,7 +49,6 @@ struct PhotoStep: View {
                 PhotoStep(hasPhoto: $hasPhoto, firstName: "Sarah", lastName: "Johnson") { }
             }
             .padding(.top, TANDASpacing.lg)
-            .background(TANDAColors.Neutral.n900)
         }
     }
     return PreviewWrapper()

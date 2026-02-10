@@ -185,16 +185,9 @@
 				6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */,
 				6A2C7F742F3955C900BA430D /* OnboardingSplash.swift */,
 				6A2C7F752F3955C900BA430D /* PasswordLoginSheet.swift */,
-				6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */,
 				6A2C7F772F3955C900BA430D /* PhotoStep.swift */,
 				6A2C7F782F3955C900BA430D /* SignUpSheet.swift */,
 				6A2C7F792F3955C900BA430D /* TANDAApp.swift */,
-				6A2C7F7A2F3955C900BA430D /* AuthButton.swift */,
-				6A2C7F7B2F3955C900BA430D /* AvatarUpload.swift */,
-				6A2C7F7C2F3955C900BA430D /* Checkbox.swift */,
-				6A2C7F7D2F3955C900BA430D /* Divider.swift */,
-				6A2C7F7E2F3955C900BA430D /* OTPInput.swift */,
-				6A2C7F7F2F3955C900BA430D /* ProgressBar.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -208,6 +201,13 @@
 				3B30E076D4DF4E73881842CF /* SheetHeader.swift */,
 			425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */,
 				1F2577A0ECE7419C813B4142 /* ButtonDock.swift */,
+				6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */,
+				6A2C7F7A2F3955C900BA430D /* AuthButton.swift */,
+				6A2C7F7B2F3955C900BA430D /* AvatarUpload.swift */,
+				6A2C7F7C2F3955C900BA430D /* Checkbox.swift */,
+				6A2C7F7D2F3955C900BA430D /* Divider.swift */,
+				6A2C7F7E2F3955C900BA430D /* OTPInput.swift */,
+				6A2C7F7F2F3955C900BA430D /* ProgressBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

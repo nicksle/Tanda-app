@@ -16,7 +16,7 @@ struct NameStep: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("What's Your Name?")
                 .font(TANDATypography.Heading.l)
-                .foregroundStyle(.white)
+                .foregroundStyle(TANDAColors.Text.primary)
                 .padding(.bottom, TANDASpacing.xs)
 
             Text("Let us know what to call you.")
@@ -51,7 +51,6 @@ struct NameStep: View {
                 Spacer()
             }
             .padding(.top, TANDASpacing.lg)
-            .background(TANDAColors.Neutral.n900)
         }
     }
     return PreviewWrapper()

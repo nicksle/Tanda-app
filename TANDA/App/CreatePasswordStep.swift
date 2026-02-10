@@ -15,7 +15,7 @@ struct CreatePasswordStep: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Create a Password")
                 .font(TANDATypography.Heading.l)
-                .foregroundStyle(.white)
+                .foregroundStyle(TANDAColors.Text.primary)
                 .padding(.bottom, TANDASpacing.xs)
 
             Text("Choose a strong password to keep your account secure.")
@@ -62,7 +62,6 @@ struct CreatePasswordStep: View {
                 Spacer()
             }
             .padding(.top, TANDASpacing.lg)
-            .background(TANDAColors.Neutral.n900)
         }
     }
     return PreviewWrapper()

@@ -15,7 +15,7 @@ struct LegalStep: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Terms & Privacy")
                 .font(TANDATypography.Heading.l)
-                .foregroundStyle(.white)
+                .foregroundStyle(TANDAColors.Text.primary)
                 .padding(.bottom, TANDASpacing.xs)
 
             Text("Please review and accept our terms to continue.")
@@ -49,7 +49,6 @@ struct LegalStep: View {
                 Spacer()
             }
             .padding(.top, TANDASpacing.lg)
-            .background(TANDAColors.Neutral.n900)
         }
     }
     return PreviewWrapper()

@@ -9,9 +9,7 @@ struct CelebrationView: View {
     @EnvironmentObject var appState: AppState
 
     var body: some View {
-        ZStack {
-            TANDAColors.Neutral.n900.ignoresSafeArea()
-
+        SheetLayout(type: .immersive, showFooter: true) {
             VStack(spacing: 0) {
                 Spacer()
 
@@ -35,7 +33,7 @@ struct CelebrationView: View {
 
                 Text("You're In!")
                     .font(TANDATypography.Display.m)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(TANDAColors.Neutral.n900)
                     .opacity(showContent ? 1.0 : 0.0)
                     .offset(y: showContent ? 0 : 20)
                     .padding(.bottom, TANDASpacing.sm)
@@ -49,14 +47,14 @@ struct CelebrationView: View {
                     .padding(.horizontal, TANDASpacing.xl)
 
                 Spacer()
-
-                PrimaryButtonDock {
-                    PrimaryButton("Continue", kind: .primary, isFullWidth: true) {
-                        appState.startOnboarding()
-                    }
-                }
-                .opacity(showContent ? 1.0 : 0.0)
             }
+        } footer: {
+            PrimaryButtonDock {
+                PrimaryButton("Continue", kind: .primary, isFullWidth: true) {
+                    appState.startOnboarding()
+                }
+            }
+            .opacity(showContent ? 1.0 : 0.0)
         }
         .onAppear {
             withAnimation(.spring(response: 0.6, dampingFraction: 0.7)) {
