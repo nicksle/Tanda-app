@@ -10,6 +10,7 @@
 		1157B371462A420EA983688F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05E6886AC60E40F8AA11E375 /* Assets.xcassets */; };
 		3474AC17FB8D4AB0AB0401FD /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB33DAA41C449B98E32AD49 /* MockData.swift */; };
 		48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F56501413E34386A09B826D /* PageView.swift */; };
+		499CAECE07C5440D937BF241 /* SheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */; };
 		539A8C189E194092B2062B96 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD829BAE84196A13F68DC /* Input.swift */; };
 		6A2C7F802F3955C900BA430D /* TANDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F792F3955C900BA430D /* TANDAApp.swift */; };
 		6A2C7F812F3955C900BA430D /* LegalStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F712F3955C900BA430D /* LegalStep.swift */; };
@@ -34,7 +35,6 @@
 		A154B6B2E59746089F48DB30 /* TANDATypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB550B48AE4FF7B8871627 /* TANDATypography.swift */; };
 		B85431870C20468EBE1FCBAB /* TANDARadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2942F3B0CA774E5A8A72F55D /* TANDARadius.swift */; };
 		D25C4AA923F64179A24E4A67 /* SheetHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B30E076D4DF4E73881842CF /* SheetHeader.swift */; };
-		499CAECE07C5440D937BF241 /* SheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */; };
 		DD6CED49006F4693B4AC87DD /* TANDASpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6184C4C144869884A0149 /* TANDASpacing.swift */; };
 		E2C74D2057E54E7DAF5A3199 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEC6AB176A4469CBB5C7093 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
@@ -122,6 +122,13 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		6A9271382F3AF67800A321FE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		793E617C52AE4E6E9F4A61A7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +139,7 @@
 		9395D68EAE724D079909AAA9 /* TANDA */ = {
 			isa = PBXGroup;
 			children = (
+				6A9271382F3AF67800A321FE /* Fonts */,
 				C329120D2ED64C849C5ACDF2 /* App */,
 				A2A713275F9A46CCA28FBE69 /* Tokens */,
 				C63D4EE25DFA43B69175C2E1 /* Components */,
@@ -199,7 +207,7 @@
 				19CBD829BAE84196A13F68DC /* Input.swift */,
 				6F56501413E34386A09B826D /* PageView.swift */,
 				3B30E076D4DF4E73881842CF /* SheetHeader.swift */,
-			425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */,
+				425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */,
 				1F2577A0ECE7419C813B4142 /* ButtonDock.swift */,
 				6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */,
 				6A2C7F7A2F3955C900BA430D /* AuthButton.swift */,

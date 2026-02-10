@@ -10,20 +10,21 @@ import SwiftUI
 
 struct TANDATypography {
     
-    // Change this to "PostGrotesk" once the font files are added.
-    // Using system font as fallback for prototype.
-    private static let fontName: String? = nil // Set to "PostGrotesk-Regular" when ready
+    // Post Grotesk custom font enabled.
+    // Falls back to system font if font files aren't found.
+    private static let fontName: String? = "PostGrotesk"
     
     private static func font(size: CGFloat, weight: Font.Weight) -> Font {
         if let fontName {
             // Custom font with weight variants
+            // Post Grotesk uses Book, Medium, Bold (no SemiBold)
             let weightSuffix: String
             switch weight {
             case .bold: weightSuffix = "Bold"
-            case .semibold: weightSuffix = "SemiBold"
+            case .semibold: weightSuffix = "Bold" // Map semibold to Bold since Post Grotesk has no SemiBold
             case .medium: weightSuffix = "Medium"
-            case .regular: weightSuffix = "Regular"
-            default: weightSuffix = "Regular"
+            case .regular: weightSuffix = "Book" // Post Grotesk uses "Book" for regular weight
+            default: weightSuffix = "Book"
             }
             return Font.custom("PostGrotesk-\(weightSuffix)", size: size)
         } else {
