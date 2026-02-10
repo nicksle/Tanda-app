@@ -1,10 +1,10 @@
 import SwiftUI
 
-// MARK: - TANDASheetHeader
+// MARK: - SheetHeader
 // Standardized header for sheet content.
 // Supports title, optional subtitle, and left/right action buttons.
 
-struct TANDASheetHeader: View {
+struct SheetHeader: View {
     
     let title: String
     let subtitle: String?
@@ -68,7 +68,7 @@ struct TANDASheetHeader: View {
                 }
             }
             .padding(.horizontal, TANDASpacing.md)
-            .padding(.vertical, TANDASpacing.md)
+            .padding(.vertical, TANDASpacing.lg)
             
             if showDivider {
                 Rectangle()
@@ -96,18 +96,18 @@ struct TANDASheetHeader: View {
 // MARK: - Previews
 
 #Preview("Title Only") {
-    TANDASheetHeader(title: "Confirm Payment")
+    SheetHeader(title: "Confirm Payment")
 }
 
 #Preview("With Close") {
-    TANDASheetHeader(
+    SheetHeader(
         title: "Transaction Details",
         rightAction: { }
     )
 }
 
 #Preview("Full Navigation") {
-    TANDASheetHeader(
+    SheetHeader(
         title: "Add Member",
         subtitle: "Step 2 of 3",
         leftAction: { },

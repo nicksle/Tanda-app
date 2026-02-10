@@ -28,7 +28,7 @@ struct PhotoStep: View {
                 .foregroundStyle(TANDAColors.Text.secondary)
                 .padding(.bottom, TANDASpacing.xl)
 
-            TANDAAvatarUpload(initials: initials) {
+            AvatarUpload(initials: initials) {
                 withAnimation {
                     hasPhoto.toggle()
                 }

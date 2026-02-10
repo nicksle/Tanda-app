@@ -1,11 +1,11 @@
 import SwiftUI
 
-// MARK: - TANDAButtonDock
+// MARK: - PrimaryButtonDock
 // Footer container for action buttons.
 // Supports 1–4 stacked buttons with an optional accessory view.
 // Used in sheets and page footers.
 
-struct TANDAButtonDock<Accessory: View>: View {
+struct PrimaryButtonDock<Accessory: View>: View {
     
     let buttons: [AnyView]
     let accessory: Accessory?
@@ -16,7 +16,7 @@ struct TANDAButtonDock<Accessory: View>: View {
     init(
         useMaterial: Bool = false,
         @ViewBuilder accessory: () -> Accessory,
-        @TANDAButtonDockBuilder buttons: () -> [AnyView]
+        @PrimaryButtonDockBuilder buttons: () -> [AnyView]
     ) {
         self.useMaterial = useMaterial
         self.accessory = accessory()
@@ -55,10 +55,10 @@ struct TANDAButtonDock<Accessory: View>: View {
 
 // MARK: - Init without Accessory
 
-extension TANDAButtonDock where Accessory == EmptyView {
+extension PrimaryButtonDock where Accessory == EmptyView {
     init(
         useMaterial: Bool = false,
-        @TANDAButtonDockBuilder buttons: () -> [AnyView]
+        @PrimaryButtonDockBuilder buttons: () -> [AnyView]
     ) {
         self.useMaterial = useMaterial
         self.accessory = nil
@@ -69,7 +69,7 @@ extension TANDAButtonDock where Accessory == EmptyView {
 // MARK: - Result Builder
 
 @resultBuilder
-struct TANDAButtonDockBuilder {
+struct PrimaryButtonDockBuilder {
     static func buildBlock(_ components: any View...) -> [AnyView] {
         components.map { AnyView($0) }
     }
@@ -80,8 +80,8 @@ struct TANDAButtonDockBuilder {
 #Preview("1 Button") {
     VStack {
         Spacer()
-        TANDAButtonDock {
-            TANDAButton("Continue", kind: .primary, isFullWidth: true) { }
+        PrimaryButtonDock {
+            PrimaryButton("Continue", kind: .primary, isFullWidth: true) { }
         }
     }
 }
@@ -89,9 +89,9 @@ struct TANDAButtonDockBuilder {
 #Preview("2 Buttons") {
     VStack {
         Spacer()
-        TANDAButtonDock {
-            TANDAButton("Confirm Payment", kind: .primary, isFullWidth: true) { }
-            TANDAButton("Cancel", kind: .tertiary) { }
+        PrimaryButtonDock {
+            PrimaryButton("Confirm Payment", kind: .primary, isFullWidth: true) { }
+            PrimaryButton("Cancel", kind: .tertiary) { }
         }
     }
 }
@@ -99,10 +99,10 @@ struct TANDAButtonDockBuilder {
 #Preview("3 Buttons") {
     VStack {
         Spacer()
-        TANDAButtonDock {
-            TANDAButton("Edit Amount", kind: .secondary, size: .large, isFullWidth: true) { }
-            TANDAButton("Send $50.00", kind: .primary, isFullWidth: true) { }
-            TANDAButton("Cancel", kind: .tertiary) { }
+        PrimaryButtonDock {
+            PrimaryButton("Edit Amount", kind: .secondary, size: .large, isFullWidth: true) { }
+            PrimaryButton("Send $50.00", kind: .primary, isFullWidth: true) { }
+            PrimaryButton("Cancel", kind: .tertiary) { }
         }
     }
 }
@@ -110,7 +110,7 @@ struct TANDAButtonDockBuilder {
 #Preview("With Accessory") {
     VStack {
         Spacer()
-        TANDAButtonDock {
+        PrimaryButtonDock {
             HStack(spacing: TANDASpacing.sm + 4) {
                 Image(systemName: "checkmark.square.fill")
                     .foregroundStyle(TANDAColors.Brand.primary)
@@ -122,8 +122,8 @@ struct TANDAButtonDockBuilder {
             .background(TANDAColors.Neutral.n50)
             .clipShape(RoundedRectangle(cornerRadius: TANDARadius.sm))
         } buttons: {
-            TANDAButton("Create Circle", kind: .primary, isFullWidth: true) { }
-            TANDAButton("Cancel", kind: .tertiary) { }
+            PrimaryButton("Create Circle", kind: .primary, isFullWidth: true) { }
+            PrimaryButton("Cancel", kind: .tertiary) { }
         }
     }
 }

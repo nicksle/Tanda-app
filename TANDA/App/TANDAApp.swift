@@ -111,13 +111,13 @@ struct SplashScreen: View {
             Spacer()
             
             VStack(spacing: TANDASpacing.sm) {
-                TANDAButton("Get Started", kind: .primary, isFullWidth: true) {
+                PrimaryButton("Get Started", kind: .primary, isFullWidth: true) {
                     withAnimation {
                         appState.currentScreen = .onboarding
                     }
                 }
                 
-                TANDAButton("I already have an account", kind: .tertiary) {
+                PrimaryButton("I already have an account", kind: .tertiary) {
                     // For demo, skip to home
                     appState.completeOnboarding()
                 }
@@ -143,17 +143,17 @@ struct OnboardingFlow: View {
             }
         } body: {
             VStack(spacing: TANDASpacing.lg) {
-                TANDAInput(
+                Input(
                     text: .constant(""),
                     label: "Full Name",
                     placeholder: "Enter your name"
                 )
-                TANDAInput(
+                Input(
                     text: .constant(""),
                     label: "Email",
                     placeholder: "name@example.com"
                 )
-                TANDAInput(
+                Input(
                     text: .constant(""),
                     type: .password,
                     label: "Password",
@@ -162,7 +162,7 @@ struct OnboardingFlow: View {
             }
             .padding(.top, TANDASpacing.md)
         } foot: {
-            TANDAButton("Continue", kind: .primary, isFullWidth: true) {
+            PrimaryButton("Continue", kind: .primary, isFullWidth: true) {
                 appState.completeOnboarding()
             }
         }

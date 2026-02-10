@@ -30,7 +30,7 @@ struct OnboardingContainerView: View {
                 .opacity(currentStep > 1 ? 1.0 : 0.3)
                 .disabled(currentStep <= 1)
 
-                TANDAProgressBar(totalSteps: totalSteps, currentStep: currentStep)
+                ProgressBar(totalSteps: totalSteps, currentStep: currentStep)
             }
             .padding(.horizontal, 20)
             .padding(.vertical, TANDASpacing.md)
@@ -66,8 +66,8 @@ struct OnboardingContainerView: View {
     @ViewBuilder
     private var buttonDock: some View {
         if currentStep == 4 {
-            TANDAButtonDock {
-                TANDAButton(
+            PrimaryButtonDock {
+                PrimaryButton(
                     hasPhoto ? "Continue" : "Add Photo",
                     kind: .primary,
                     isFullWidth: true
@@ -78,13 +78,13 @@ struct OnboardingContainerView: View {
                         hasPhoto = true
                     }
                 }
-                TANDAButton("Skip for Now", kind: .tertiary) {
+                PrimaryButton("Skip for Now", kind: .tertiary) {
                     completeOnboarding()
                 }
             }
         } else {
-            TANDAButtonDock {
-                TANDAButton(
+            PrimaryButtonDock {
+                PrimaryButton(
                     "Continue",
                     kind: .primary,
                     isDisabled: !isCurrentStepValid,

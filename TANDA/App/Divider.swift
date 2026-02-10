@@ -1,10 +1,10 @@
 import SwiftUI
 
-// MARK: - TANDADivider
+// MARK: - Divider
 // Horizontal divider with optional centered label.
 // Used for separating sections, especially in sign-up/auth flows.
 
-struct TANDADivider: View {
+struct Divider: View {
     var label: String? = nil
 
     var body: some View {
@@ -30,13 +30,13 @@ struct TANDADivider: View {
 
 #Preview("With Label") {
     VStack(spacing: TANDASpacing.xl) {
-        TANDADivider(label: "or continue with")
-        TANDADivider(label: "or")
+        Divider(label: "or continue with")
+        Divider(label: "or")
     }
     .padding(TANDASpacing.lg)
 }
 
 #Preview("Without Label") {
-    TANDADivider()
+    Divider()
         .padding(TANDASpacing.lg)
 }

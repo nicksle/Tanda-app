@@ -1,10 +1,10 @@
 import SwiftUI
 
-// MARK: - TANDAButton
+// MARK: - PrimaryButton
 // Primary action component. Supports 4 kinds × 5 sizes.
 // Constraint: Primary kind is Large only.
 
-struct TANDAButton: View {
+struct PrimaryButton: View {
     
     // MARK: - Types
     
@@ -173,7 +173,7 @@ struct TANDAButton: View {
                 }
             }
         }
-        .buttonStyle(TANDAButtonStyle(
+        .buttonStyle(PrimaryButtonStyle(
             fillColor: fillColor,
             pressedFillColor: pressedFillColor,
             height: size.height,
@@ -242,7 +242,7 @@ struct TANDAButton: View {
 
 // MARK: - Button Style
 
-struct TANDAButtonStyle: ButtonStyle {
+struct PrimaryButtonStyle: ButtonStyle {
     let fillColor: Color
     let pressedFillColor: Color
     let height: CGFloat
@@ -264,33 +264,33 @@ struct TANDAButtonStyle: ButtonStyle {
     ScrollView {
         VStack(spacing: 24) {
             // Primary
-            TANDAButton("Continue", kind: .primary) { }
-            TANDAButton("Continue", kind: .primary, isFullWidth: true) { }
+            PrimaryButton("Continue", kind: .primary) { }
+            PrimaryButton("Continue", kind: .primary, isFullWidth: true) { }
             
             // Secondary sizes
-            TANDAButton("Cancel", kind: .secondary, size: .large) { }
-            TANDAButton("Cancel", kind: .secondary, size: .medium) { }
-            TANDAButton("Cancel", kind: .secondary, size: .small) { }
+            PrimaryButton("Cancel", kind: .secondary, size: .large) { }
+            PrimaryButton("Cancel", kind: .secondary, size: .medium) { }
+            PrimaryButton("Cancel", kind: .secondary, size: .small) { }
             
             // Tertiary
-            TANDAButton("Skip", kind: .tertiary) { }
+            PrimaryButton("Skip", kind: .tertiary) { }
             
             // Destructive
-            TANDAButton("Delete", kind: .destructive) { }
+            PrimaryButton("Delete", kind: .destructive) { }
             
             // States
-            TANDAButton("Disabled", kind: .primary, isDisabled: true) { }
-            TANDAButton("Loading", kind: .primary, isLoading: true) { }
+            PrimaryButton("Disabled", kind: .primary, isDisabled: true) { }
+            PrimaryButton("Loading", kind: .primary, isLoading: true) { }
             
             // With icons
-            TANDAButton(
+            PrimaryButton(
                 "Add Member",
                 kind: .primary,
                 leadingIcon: Image(systemName: "plus")
             ) { }
             
             // Circle
-            TANDAButton(
+            PrimaryButton(
                 icon: Image(systemName: "heart.fill"),
                 kind: .secondary,
                 size: .circleLarge,

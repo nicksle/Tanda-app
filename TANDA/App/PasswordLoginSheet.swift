@@ -39,7 +39,7 @@ struct PasswordLoginSheet: View {
                 .foregroundStyle(TANDAColors.Text.secondary)
                 .padding(.bottom, TANDASpacing.lg)
 
-            TANDAInput(
+            Input(
                 text: $password,
                 type: .password,
                 label: "Password",
@@ -56,7 +56,7 @@ struct PasswordLoginSheet: View {
             }
             .padding(.bottom, TANDASpacing.lg)
 
-            TANDAButton(
+            PrimaryButton(
                 "Sign In",
                 kind: .primary,
                 isLoading: isLoading,

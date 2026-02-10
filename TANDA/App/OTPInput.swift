@@ -1,9 +1,9 @@
 import SwiftUI
 
-// MARK: - TANDAOTPInput
+// MARK: - OTPInput
 // 6-digit code entry for email verification.
 
-struct TANDAOTPInput: View {
+struct OTPInput: View {
     @Binding var code: String
     var onComplete: ((String) -> Void)? = nil
 
@@ -84,7 +84,7 @@ struct TANDAOTPInput: View {
     struct PreviewWrapper: View {
         @State private var code = ""
         var body: some View {
-            TANDAOTPInput(code: $code)
+            OTPInput(code: $code)
                 .padding(24)
                 .background(TANDAColors.Neutral.n900)
         }

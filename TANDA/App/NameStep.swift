@@ -24,14 +24,14 @@ struct NameStep: View {
                 .foregroundStyle(TANDAColors.Text.secondary)
                 .padding(.bottom, TANDASpacing.lg)
 
-            TANDAInput(
+            Input(
                 text: $firstName,
                 label: "First Name",
                 placeholder: "Enter your first name"
             )
             .padding(.bottom, TANDASpacing.md)
 
-            TANDAInput(
+            Input(
                 text: $lastName,
                 label: "Last Name",
                 placeholder: "Enter your last name"

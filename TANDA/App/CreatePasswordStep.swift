@@ -23,7 +23,7 @@ struct CreatePasswordStep: View {
                 .foregroundStyle(TANDAColors.Text.secondary)
                 .padding(.bottom, TANDASpacing.lg)
 
-            TANDAInput(
+            Input(
                 text: $password,
                 type: .password,
                 label: "Password",
@@ -34,7 +34,7 @@ struct CreatePasswordStep: View {
             PasswordStrengthBar(password: password)
                 .padding(.bottom, TANDASpacing.lg)
 
-            TANDAInput(
+            Input(
                 text: $confirmPassword,
                 type: .password,
                 label: "Confirm Password",

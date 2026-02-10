@@ -120,8 +120,8 @@ extension PageView where Foot == EmptyView {
     } foot: {
         // FOOTER
         VStack(spacing: TANDASpacing.sm) {
-            TANDAButton("Continue", kind: .primary, isFullWidth: true) { }
-            TANDAButton("Skip for now", kind: .tertiary) { }
+            PrimaryButton("Continue", kind: .primary, isFullWidth: true) { }
+            PrimaryButton("Skip for now", kind: .tertiary) { }
         }
     }
 }

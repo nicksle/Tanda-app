@@ -1,10 +1,10 @@
 import SwiftUI
 
-// MARK: - TANDAInput
+// MARK: - Input
 // Form input component supporting text, amount, password, and search types.
 // Includes label, placeholder, helper text, error state, and prefix.
 
-struct TANDAInput: View {
+struct Input: View {
     
     // MARK: - Types
     
@@ -193,45 +193,45 @@ struct TANDAInput: View {
 #Preview("Input Variants") {
     ScrollView {
         VStack(spacing: 32) {
-            TANDAInput(
+            Input(
                 text: .constant("Sarah Johnson"),
                 label: "Full Name",
                 placeholder: "Enter your name"
             )
             
-            TANDAInput(
+            Input(
                 text: .constant(""),
                 label: "Email",
                 placeholder: "name@example.com"
             )
             
-            TANDAInput(
+            Input(
                 text: .constant("500.00"),
                 type: .amount,
                 label: "Contribution",
                 helperText: "Minimum $50 per cycle"
             )
             
-            TANDAInput(
+            Input(
                 text: .constant(""),
                 type: .password,
                 label: "Password",
                 placeholder: "Enter password"
             )
             
-            TANDAInput(
+            Input(
                 text: .constant(""),
                 type: .search,
                 placeholder: "Search members..."
             )
             
-            TANDAInput(
+            Input(
                 text: .constant("invalidemail"),
                 label: "Email",
                 error: "Please enter a valid email address"
             )
             
-            TANDAInput(
+            Input(
                 text: .constant(""),
                 label: "Disabled",
                 placeholder: "Can't edit this",

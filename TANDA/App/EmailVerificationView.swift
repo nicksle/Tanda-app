@@ -15,23 +15,13 @@ struct EmailVerificationView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack {
-            TANDAColors.Neutral.n900.ignoresSafeArea()
-
+        SheetLayout(
+            type: .immersive,
+            title: "Verify Email",
+            showRightAction: true,
+            rightAction: { dismiss() }
+        ) {
             VStack(spacing: 0) {
-                HStack {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "xmark")
-                            .font(.system(size: 20, weight: .medium))
-                            .foregroundStyle(.white)
-                            .frame(width: 44, height: 44)
-                    }
-                    Spacer()
-                }
-                .padding(.horizontal, TANDASpacing.md)
-
                 Spacer()
 
                 ZStack {
@@ -59,7 +49,7 @@ struct EmailVerificationView: View {
 
                 Text("Check Your Email")
                     .font(TANDATypography.Heading.l)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(TANDAColors.Neutral.n900)
                     .padding(.bottom, TANDASpacing.sm)
 
                 Text("We sent a verification code to")
@@ -69,10 +59,10 @@ struct EmailVerificationView: View {
                 Text(appState.authEmail)
                     .font(TANDATypography.Paragraph.m)
                     .fontWeight(.medium)
-                    .foregroundStyle(.white)
+                    .foregroundStyle(TANDAColors.Neutral.n900)
                     .padding(.bottom, TANDASpacing.xl)
 
-                TANDAOTPInput(code: $otpCode)
+                OTPInput(code: $otpCode)
                     .padding(.horizontal, TANDASpacing.lg)
                     .padding(.bottom, TANDASpacing.lg)
 
@@ -87,20 +77,20 @@ struct EmailVerificationView: View {
                 }
 
                 Spacer()
-
-                TANDAButtonDock {
-                    TANDAButton(
-                        "Verify",
-                        kind: .primary,
-                        isLoading: isVerifying,
-                        isDisabled: otpCode.count < 6,
-                        isFullWidth: true
-                    ) {
-                        isVerifying = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                            isVerifying = false
-                            showCelebration = true
-                        }
+            }
+        } footer: {
+            PrimaryButtonDock {
+                PrimaryButton(
+                    "Verify",
+                    kind: .primary,
+                    isLoading: isVerifying,
+                    isDisabled: otpCode.count < 6,
+                    isFullWidth: true
+                ) {
+                    isVerifying = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                        isVerifying = false
+                        showCelebration = true
                     }
                 }
             }

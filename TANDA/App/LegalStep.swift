@@ -23,13 +23,13 @@ struct LegalStep: View {
                 .foregroundStyle(TANDAColors.Text.secondary)
                 .padding(.bottom, TANDASpacing.lg)
 
-            TANDACheckbox(
+            Checkbox(
                 isChecked: $agreedToTerms,
                 label: "I agree to the Terms of Service",
                 linkText: "Terms of Service"
             )
 
-            TANDACheckbox(
+            Checkbox(
                 isChecked: $agreedToPrivacy,
                 label: "I have read and agree to the Privacy Policy",
                 linkText: "Privacy Policy"

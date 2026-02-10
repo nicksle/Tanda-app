@@ -28,7 +28,7 @@ struct SignUpSheet: View {
                 .padding(.bottom, 24)
 
             // Email Input
-            TANDAInput(
+            Input(
                 text: $email,
                 label: "Email",
                 placeholder: "name@example.com"
@@ -36,7 +36,7 @@ struct SignUpSheet: View {
             .padding(.bottom, 16)
 
             // Continue Button
-            TANDAButton("Continue", kind: .primary, isFullWidth: true) {
+            PrimaryButton("Continue", kind: .primary, isFullWidth: true) {
                 // TODO: Navigate to email verification
                 dismiss()
                 appState.completeOnboarding()
@@ -46,7 +46,7 @@ struct SignUpSheet: View {
             .padding(.bottom, 20)
 
             // Divider
-            TANDADivider(label: "or continue with")
+            Divider(label: "or continue with")
                 .padding(.bottom, 20)
 
             // Apple Sign In
@@ -68,7 +68,7 @@ struct SignUpSheet: View {
             .padding(.bottom, 12)
 
             // Google Sign In
-            TANDAAuthButton(provider: .google) {
+            AuthButton(provider: .google) {
                 // TODO: Handle Google sign in
                 dismiss()
                 appState.completeOnboarding()

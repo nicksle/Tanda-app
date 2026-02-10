@@ -1,9 +1,9 @@
 import SwiftUI
 
-// MARK: - TANDAProgressBar
+// MARK: - ProgressBar
 // Segmented horizontal progress indicator for multi-step flows.
 
-struct TANDAProgressBar: View {
+struct ProgressBar: View {
     let totalSteps: Int
     let currentStep: Int
     var showShimmer: Bool = true
@@ -39,10 +39,10 @@ struct TANDAProgressBar: View {
 
 #Preview("Progress Bar") {
     VStack(spacing: 32) {
-        TANDAProgressBar(totalSteps: 4, currentStep: 1)
-        TANDAProgressBar(totalSteps: 4, currentStep: 2)
-        TANDAProgressBar(totalSteps: 4, currentStep: 3)
-        TANDAProgressBar(totalSteps: 4, currentStep: 4)
+        ProgressBar(totalSteps: 4, currentStep: 1)
+        ProgressBar(totalSteps: 4, currentStep: 2)
+        ProgressBar(totalSteps: 4, currentStep: 3)
+        ProgressBar(totalSteps: 4, currentStep: 4)
     }
     .padding(.horizontal, 24)
     .frame(maxWidth: .infinity, maxHeight: .infinity)

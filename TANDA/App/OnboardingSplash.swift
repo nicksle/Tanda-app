@@ -41,13 +41,11 @@ struct OnboardingSplash: View {
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .indexViewStyle(.page(backgroundDisplayMode: .automatic))
 
-                VStack {
-                    TANDAButton("Get Started", kind: .primary, isFullWidth: true) {
+                PrimaryButtonDock {
+                    PrimaryButton("Get Started", kind: .primary, isFullWidth: true) {
                         showSignUp = true
                     }
                 }
-                .padding(.horizontal, 24)
-                .padding(.bottom, 16)
             }
         }
         .sheet(isPresented: $showSignUp) {

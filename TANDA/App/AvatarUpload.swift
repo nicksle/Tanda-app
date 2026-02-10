@@ -1,9 +1,9 @@
 import SwiftUI
 
-// MARK: - TANDAAvatarUpload
+// MARK: - AvatarUpload
 // Circular avatar placeholder with badge for profile photo upload.
 
-struct TANDAAvatarUpload: View {
+struct AvatarUpload: View {
     let initials: String?
     var onTap: (() -> Void)? = nil
 
@@ -68,8 +68,8 @@ struct TANDAAvatarUpload: View {
 
 #Preview("Avatar Upload") {
     VStack(spacing: 48) {
-        TANDAAvatarUpload(initials: nil)
-        TANDAAvatarUpload(initials: "SJ")
+        AvatarUpload(initials: nil)
+        AvatarUpload(initials: "SJ")
     }
     .padding(24)
     .background(TANDAColors.Neutral.n900)

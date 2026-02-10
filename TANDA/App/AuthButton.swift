@@ -1,10 +1,10 @@
 import SwiftUI
 
-// MARK: - TANDAAuthButton
+// MARK: - AuthButton
 // Social authentication button for Google sign-in.
 // Apple uses the native SignInWithAppleButton instead.
 
-struct TANDAAuthButton: View {
+struct AuthButton: View {
     enum Provider {
         case google
     }
@@ -57,7 +57,7 @@ struct TANDAAuthButton: View {
 
 #Preview("Google Auth Button") {
     VStack(spacing: TANDASpacing.md) {
-        TANDAAuthButton(provider: .google) {
+        AuthButton(provider: .google) {
             print("Google sign in tapped")
         }
     }

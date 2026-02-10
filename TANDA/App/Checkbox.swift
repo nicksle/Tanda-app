@@ -1,9 +1,9 @@
 import SwiftUI
 
-// MARK: - TANDACheckbox
+// MARK: - Checkbox
 // Toggleable checkbox for legal agreements.
 
-struct TANDACheckbox: View {
+struct Checkbox: View {
     @Binding var isChecked: Bool
     let label: String
     var linkText: String? = nil
@@ -66,7 +66,7 @@ struct TANDACheckbox: View {
     struct PreviewWrapper: View {
         @State private var checked = false
         var body: some View {
-            TANDACheckbox(
+            Checkbox(
                 isChecked: $checked,
                 label: "I agree to the Terms of Service",
                 linkText: "Terms of Service"

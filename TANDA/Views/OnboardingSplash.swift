@@ -45,7 +45,7 @@ struct OnboardingSplash: View {
 
                 // Button dock (transparent)
                 VStack {
-                    TANDAButton("Get Started", kind: .primary, isFullWidth: true) {
+                    PrimaryButton("Get Started", kind: .primary, isFullWidth: true) {
                         showSignUp = true
                     }
                 }

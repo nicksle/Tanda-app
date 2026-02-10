@@ -50,8 +50,8 @@ struct CelebrationView: View {
 
                 Spacer()
 
-                TANDAButtonDock {
-                    TANDAButton("Continue", kind: .primary, isFullWidth: true) {
+                PrimaryButtonDock {
+                    PrimaryButton("Continue", kind: .primary, isFullWidth: true) {
                         appState.startOnboarding()
                     }
                 }
