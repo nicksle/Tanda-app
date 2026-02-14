@@ -21,12 +21,12 @@ struct SheetIntro: View {
         VStack(alignment: .leading, spacing: TANDASpacing.xs) {
             Text(title)
                 .font(TANDATypography.Heading.l)
-                .foregroundStyle(TANDAColors.Neutral.n900)
+                .foregroundStyle(TANDAColors.Text.primary)
 
             if let subtitle {
                 Text(subtitle)
                     .font(TANDATypography.Paragraph.m)
-                    .foregroundStyle(TANDAColors.Neutral.n500)
+                    .foregroundStyle(TANDAColors.Text.secondary)
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)

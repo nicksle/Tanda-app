@@ -191,28 +191,30 @@ struct PrimaryButton: View {
     private var textContent: some View {
         HStack(spacing: TANDASpacing.sm) {
             if isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: textColor))
-                    .scaleEffect(0.8)
-            }
-            
-            if let leadingIcon, !isLoading {
-                leadingIcon
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: size.iconSize, height: size.iconSize)
-            }
-            
-            if let label {
-                Text(label)
-                    .font(size.font)
-            }
-            
-            if let trailingIcon {
-                trailingIcon
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: size.iconSize, height: size.iconSize)
+                SpinningLoader(
+                    size: 20,
+                    foregroundColor: textColor,
+                    backgroundColor: textColor.opacity(0.2)
+                )
+            } else {
+                if let leadingIcon {
+                    leadingIcon
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: size.iconSize, height: size.iconSize)
+                }
+
+                if let label {
+                    Text(label)
+                        .font(size.font)
+                }
+
+                if let trailingIcon {
+                    trailingIcon
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: size.iconSize, height: size.iconSize)
+                }
             }
         }
         .foregroundStyle(textColor)
@@ -225,9 +227,11 @@ struct PrimaryButton: View {
     private var circleContent: some View {
         Group {
             if isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: textColor))
-                    .scaleEffect(0.7)
+                SpinningLoader(
+                    size: 18,
+                    foregroundColor: textColor,
+                    backgroundColor: textColor.opacity(0.2)
+                )
             } else if let icon {
                 icon
                     .resizable()

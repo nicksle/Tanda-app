@@ -17,27 +17,27 @@ struct PhotoStep: View {
     }
 
     var body: some View {
-        VStack(spacing: 0) {
-            Text("Add a Photo")
-                .font(TANDATypography.Heading.l)
-                .foregroundStyle(TANDAColors.Text.primary)
-                .padding(.bottom, TANDASpacing.xs)
-
-            Text("Help your friends recognize you in circles.")
-                .font(TANDATypography.Paragraph.m)
-                .foregroundStyle(TANDAColors.Text.secondary)
-                .padding(.bottom, TANDASpacing.xl)
-
+        VStack(alignment: .leading, spacing: 0) {
             AvatarUpload(initials: initials) {
                 withAnimation {
                     hasPhoto.toggle()
                 }
             }
-            .padding(.bottom, TANDASpacing.xl)
+            .padding(.bottom, TANDASpacing.lg)
+            .padding(.horizontal, TANDASpacing.sm)
 
-            Spacer()
+            VStack(alignment: .leading, spacing: TANDASpacing.xs) {
+                Text("Add a Photo")
+                    .font(TANDATypography.Display.m)
+                    .foregroundStyle(TANDAColors.Text.primary)
+
+                Text("Help your friends recognize you in circles.")
+                    .font(TANDATypography.Paragraph.l)
+                    .foregroundStyle(TANDAColors.Text.secondary)
+            }
+            .padding(.horizontal, TANDASpacing.sm)
         }
-        .padding(.horizontal, TANDASpacing.lg)
+        .padding(.horizontal, TANDASpacing.md)
     }
 }
 

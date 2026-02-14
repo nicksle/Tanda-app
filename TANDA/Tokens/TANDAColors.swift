@@ -78,11 +78,12 @@ struct TANDAColors {
     }
     
     struct Text {
-        static let primary   = Color("text.primary")
-        static let secondary = Color("text.secondary")
-        static let tertiary  = Color("text.tertiary")
-        
-        // Fallbacks
+        // Light mode colors (app is locked to light mode)
+        static let primary   = Neutral.n900 // Black
+        static let secondary = Neutral.n500 // Medium grey
+        static let tertiary  = Neutral.n400 // Light grey
+
+        // Fallbacks for future dark mode support
         static func primary(for scheme: ColorScheme) -> Color {
             scheme == .dark ? Neutral.n0 : Neutral.n900
         }
@@ -97,10 +98,20 @@ struct TANDAColors {
     struct Brand {
         static let primary   = Purple.p500
         static let secondary = Purple.p600
+
+        // Social Feed / Figma Brand Colors
+        static let black1 = Color(hex: "#05031E")  // Darkest text
+        static let black2 = Color(hex: "#66666E")  // Secondary text
+        static let black3 = Color(hex: "#99999E")  // Tertiary text/metadata
+        static let white2 = Color(hex: "#F6F6F8")  // Balance card background
+        static let white3 = Color(hex: "#EDEDF0")  // Borders/dividers
+        static let accentPurple = Color(hex: "#A052FE")  // Action purple
+        static let successGreen = Color(hex: "#19D22B")  // Positive transaction amounts
     }
 
     // MARK: - Common Aliases
     static let border = Neutral.n700
+    static let divider = Brand.white3
 }
 
 // MARK: - Color Hex Initializer

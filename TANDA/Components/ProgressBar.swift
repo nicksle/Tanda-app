@@ -55,7 +55,7 @@ struct ProgressBar: View {
             if showShimmer {
                 withAnimation(
                     .linear(duration: 1.5)
-                    .repeatForever(autoreverses: false)
+                    .repeatForever(autoreverses: true)
                 ) {
                     shimmerOffset = 1.0
                 }
@@ -73,7 +73,7 @@ struct ProgressBar: View {
                 shimmerOffset = -1.0
                 withAnimation(
                     .linear(duration: 1.5)
-                    .repeatForever(autoreverses: false)
+                    .repeatForever(autoreverses: true)
                 ) {
                     shimmerOffset = 1.0
                 }
@@ -85,7 +85,7 @@ struct ProgressBar: View {
         if isCompleted || isActive {
             return TANDAColors.Brand.primary
         }
-        return TANDAColors.Neutral.n700
+        return TANDAColors.Purple.p200
     }
 }
 

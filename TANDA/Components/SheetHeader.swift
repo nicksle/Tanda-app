@@ -49,12 +49,12 @@ struct SheetHeader: View {
                 VStack(spacing: TANDASpacing.xxs) {
                     Text(title)
                         .font(TANDATypography.Heading.s)
-                        .foregroundStyle(TANDAColors.Neutral.n900)
-                    
+                        .foregroundStyle(TANDAColors.Text.primary)
+
                     if let subtitle {
                         Text(subtitle)
                             .font(TANDATypography.Paragraph.s)
-                            .foregroundStyle(TANDAColors.Neutral.n500)
+                            .foregroundStyle(TANDAColors.Text.secondary)
                     }
                 }
                 
@@ -85,10 +85,10 @@ struct SheetHeader: View {
         Button(action: action) {
             icon
                 .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(TANDAColors.Neutral.n900)
+                .foregroundStyle(TANDAColors.Text.primary)
                 .frame(width: 32, height: 32)
                 .background(TANDAColors.Neutral.n100)
-                .clipShape(Circle())
+                .clipShape(SwiftUI.Circle())
         }
     }
 }

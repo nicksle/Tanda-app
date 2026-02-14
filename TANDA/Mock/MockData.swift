@@ -134,4 +134,72 @@ struct MockData {
     static let activeCircleCount: Int = 3
     static let nextPayoutAmount: Double = 900
     static let nextPayoutDate: String = "Feb 10"
+
+    // MARK: - Social Feed Data
+
+    // Feed users (using new User model)
+    static let feedUsers: [User] = [
+        User(name: "Nick Le"),
+        User(name: "Trevor Pels"),
+        User(name: "Angelo Anders"),
+        User(name: "Christine Quinta"),
+        User(name: "Sarah Kim"),
+        User(name: "David Chen"),
+        User(name: "Amara Osei"),
+        User(name: "Marcus Rivera"),
+        User(name: "Priya Patel"),
+        User(name: "James Kim"),
+        User(name: "Lisa Park"),
+        User(name: "Alex Johnson"),
+        User(name: "Maya Rodriguez"),
+        User(name: "Tyler Washington"),
+        User(name: "Emma Thompson"),
+    ]
+
+    // Sample posts
+    static let samplePosts: [Post] = [
+        Post(
+            user: feedUsers[0],
+            content: "I was able to get some new wheels for my bike!!",
+            imageURL: "bike_image.jpg",
+            timestamp: Date().addingTimeInterval(-16 * 3600),  // 16 hours ago
+            visibility: .public,
+            likes: Array(feedUsers.suffix(18)),
+            comments: [
+                Comment(user: feedUsers[0], text: "Can't wait to get that schmoney. And more text to make this a two line comment", timestamp: Date().addingTimeInterval(-15 * 3600)),
+                Comment(user: feedUsers[1], text: "Wow nice!", timestamp: Date().addingTimeInterval(-14 * 3600))
+            ],
+            circleName: "Bike Parts"
+        ),
+        Post(
+            user: feedUsers[1],
+            content: "has started! Trevor Pels, Nick Le, Angelo Anders and Christine Quinta are making contributions",
+            timestamp: Date().addingTimeInterval(-16 * 3600),
+            visibility: .public,
+            likes: [],
+            comments: [],
+            circleName: "Urban Explorers"
+        ),
+        Post(
+            user: feedUsers[4],
+            content: "Just reached my savings goal for this month! Feeling accomplished 💪",
+            timestamp: Date().addingTimeInterval(-2 * 3600),
+            visibility: .public,
+            likes: Array(feedUsers.prefix(5)),
+            comments: [
+                Comment(user: feedUsers[5], text: "Amazing! Keep it up!", timestamp: Date().addingTimeInterval(-1 * 3600))
+            ]
+        ),
+        Post(
+            user: feedUsers[6],
+            content: "Our family fund hit $5000 today! Thanks everyone for staying committed.",
+            timestamp: Date().addingTimeInterval(-5 * 3600),
+            visibility: .friends,
+            likes: Array(feedUsers.prefix(8)),
+            comments: [
+                Comment(user: feedUsers[7], text: "This is awesome! 🎉", timestamp: Date().addingTimeInterval(-4 * 3600)),
+                Comment(user: feedUsers[8], text: "Proud to be part of this!", timestamp: Date().addingTimeInterval(-3 * 3600))
+            ]
+        ),
+    ]
 }

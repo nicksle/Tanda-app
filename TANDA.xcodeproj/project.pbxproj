@@ -30,6 +30,48 @@
 		6A2C7F8F2F3955C900BA430D /* OTPInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7E2F3955C900BA430D /* OTPInput.swift */; };
 		6A2C7F902F3955C900BA430D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7F2F3955C900BA430D /* ProgressBar.swift */; };
 		6A2C7F912F3955C900BA430D /* AvatarUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7B2F3955C900BA430D /* AvatarUpload.swift */; };
+		6A5649882F3E522500BB0C4D /* PostActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497C2F3E522500BB0C4D /* PostActions.swift */; };
+		6A5649892F3E522500BB0C4D /* PostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497D2F3E522500BB0C4D /* PostCard.swift */; };
+		6A56498A2F3E522500BB0C4D /* PostInputBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649802F3E522500BB0C4D /* PostInputBar.swift */; };
+		6A56498B2F3E522500BB0C4D /* CircleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649772F3E522500BB0C4D /* CircleCard.swift */; };
+		6A56498C2F3E522500BB0C4D /* PositionCircleIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497B2F3E522500BB0C4D /* PositionCircleIndicator.swift */; };
+		6A56498D2F3E522500BB0C4D /* SelectionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649822F3E522500BB0C4D /* SelectionCard.swift */; };
+		6A56498E2F3E522500BB0C4D /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649812F3E522500BB0C4D /* SegmentedControl.swift */; };
+		6A56498F2F3E522500BB0C4D /* AvatarStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649742F3E522500BB0C4D /* AvatarStack.swift */; };
+		6A5649902F3E522500BB0C4D /* CirclePositionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649782F3E522500BB0C4D /* CirclePositionRow.swift */; };
+		6A5649912F3E522500BB0C4D /* JoinCircleSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497A2F3E522500BB0C4D /* JoinCircleSheet.swift */; };
+		6A5649922F3E522500BB0C4D /* BalanceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649752F3E522500BB0C4D /* BalanceCard.swift */; };
+		6A5649932F3E522500BB0C4D /* PostContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497E2F3E522500BB0C4D /* PostContent.swift */; };
+		6A5649942F3E522500BB0C4D /* SheetIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649832F3E522500BB0C4D /* SheetIntro.swift */; };
+		6A5649952F3E522500BB0C4D /* SpinningLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649842F3E522500BB0C4D /* SpinningLoader.swift */; };
+		6A5649962F3E522500BB0C4D /* StatusPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649852F3E522500BB0C4D /* StatusPill.swift */; };
+		6A5649972F3E522500BB0C4D /* CategoryTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649762F3E522500BB0C4D /* CategoryTag.swift */; };
+		6A5649982F3E522500BB0C4D /* CommentSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649792F3E522500BB0C4D /* CommentSection.swift */; };
+		6A5649992F3E522500BB0C4D /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649862F3E522500BB0C4D /* TabBar.swift */; };
+		6A56499A2F3E522500BB0C4D /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649872F3E522500BB0C4D /* TransactionRow.swift */; };
+		6A56499B2F3E522500BB0C4D /* PostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497F2F3E522500BB0C4D /* PostHeader.swift */; };
+		6A7C3A362F3E59F800F658D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A342F3E59F800F658D8 /* User.swift */; };
+		6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A322F3E59F800F658D8 /* Post.swift */; };
+		6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A312F3E59F800F658D8 /* Comment.swift */; };
+		6A7C3A392F3E59F800F658D8 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A332F3E59F800F658D8 /* Transaction.swift */; };
+		6A7C3A3A2F3E59F800F658D8 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A302F3E59F800F658D8 /* Circle.swift */; };
+		6A7C3A552F3E5B3500F658D8 /* CircleMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A532F3E5B3500F658D8 /* CircleMockData.swift */; };
+		6A7C3A562F3E5B3500F658D8 /* TransactionMockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A542F3E5B3500F658D8 /* TransactionMockData.swift */; };
+		6A7C3A7C2F3E5D7300F658D8 /* SurveyStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A782F3E5D7300F658D8 /* SurveyStep2.swift */; };
+		6A7C3A7D2F3E5D7300F658D8 /* CircleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A712F3E5D7300F658D8 /* CircleDetailView.swift */; };
+		6A7C3A7E2F3E5D7300F658D8 /* MoneyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A732F3E5D7300F658D8 /* MoneyView.swift */; };
+		6A7C3A7F2F3E5D7300F658D8 /* CirclesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A722F3E5D7300F658D8 /* CirclesView.swift */; };
+		6A7C3A802F3E5D7300F658D8 /* SkeletonLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A742F3E5D7300F658D8 /* SkeletonLoadingView.swift */; };
+		6A7C3A812F3E5D7300F658D8 /* SurveyIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A762F3E5D7300F658D8 /* SurveyIntro.swift */; };
+		6A7C3A822F3E5D7300F658D8 /* SurveyStep3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A792F3E5D7300F658D8 /* SurveyStep3.swift */; };
+		6A7C3A832F3E5D7300F658D8 /* UserSegmentationSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A7B2F3E5D7300F658D8 /* UserSegmentationSurveyView.swift */; };
+		6A7C3A842F3E5D7300F658D8 /* SocialFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A752F3E5D7300F658D8 /* SocialFeedView.swift */; };
+		6A7C3A852F3E5D7300F658D8 /* SurveyStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A772F3E5D7300F658D8 /* SurveyStep1.swift */; };
+		6A7C3A862F3E5D7300F658D8 /* TabContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A7A2F3E5D7300F658D8 /* TabContainerView.swift */; };
+		6A7C3A8A2F3E9FBE00F658D8 /* MemberCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A892F3E9FBE00F658D8 /* MemberCard.swift */; };
+		6A7C3A8E2F3EAEAF00F658D8 /* PaymentScheduleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A8C2F3EAEAF00F658D8 /* PaymentScheduleSection.swift */; };
+		6A7C3A8F2F3EAEAF00F658D8 /* PaymentDateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A8B2F3EAEAF00F658D8 /* PaymentDateCard.swift */; };
+		6A7C3A902F3EAEAF00F658D8 /* VacantPositionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A8D2F3EAEAF00F658D8 /* VacantPositionCard.swift */; };
 		700749B64A1A47D09F5D8D06 /* ButtonDock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2577A0ECE7419C813B4142 /* ButtonDock.swift */; };
 		89D935A24E7141BA88FE386C /* TANDAColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060CC99DF434FB48AFC529B /* TANDAColors.swift */; };
 		A154B6B2E59746089F48DB30 /* TANDATypography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46FB550B48AE4FF7B8871627 /* TANDATypography.swift */; };
@@ -67,6 +109,48 @@
 		6A2C7F7D2F3955C900BA430D /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
 		6A2C7F7E2F3955C900BA430D /* OTPInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInput.swift; sourceTree = "<group>"; };
 		6A2C7F7F2F3955C900BA430D /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		6A5649742F3E522500BB0C4D /* AvatarStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarStack.swift; sourceTree = "<group>"; };
+		6A5649752F3E522500BB0C4D /* BalanceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCard.swift; sourceTree = "<group>"; };
+		6A5649762F3E522500BB0C4D /* CategoryTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTag.swift; sourceTree = "<group>"; };
+		6A5649772F3E522500BB0C4D /* CircleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleCard.swift; sourceTree = "<group>"; };
+		6A5649782F3E522500BB0C4D /* CirclePositionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclePositionRow.swift; sourceTree = "<group>"; };
+		6A5649792F3E522500BB0C4D /* CommentSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentSection.swift; sourceTree = "<group>"; };
+		6A56497A2F3E522500BB0C4D /* JoinCircleSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCircleSheet.swift; sourceTree = "<group>"; };
+		6A56497B2F3E522500BB0C4D /* PositionCircleIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCircleIndicator.swift; sourceTree = "<group>"; };
+		6A56497C2F3E522500BB0C4D /* PostActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActions.swift; sourceTree = "<group>"; };
+		6A56497D2F3E522500BB0C4D /* PostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCard.swift; sourceTree = "<group>"; };
+		6A56497E2F3E522500BB0C4D /* PostContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostContent.swift; sourceTree = "<group>"; };
+		6A56497F2F3E522500BB0C4D /* PostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeader.swift; sourceTree = "<group>"; };
+		6A5649802F3E522500BB0C4D /* PostInputBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostInputBar.swift; sourceTree = "<group>"; };
+		6A5649812F3E522500BB0C4D /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		6A5649822F3E522500BB0C4D /* SelectionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCard.swift; sourceTree = "<group>"; };
+		6A5649832F3E522500BB0C4D /* SheetIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetIntro.swift; sourceTree = "<group>"; };
+		6A5649842F3E522500BB0C4D /* SpinningLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningLoader.swift; sourceTree = "<group>"; };
+		6A5649852F3E522500BB0C4D /* StatusPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPill.swift; sourceTree = "<group>"; };
+		6A5649862F3E522500BB0C4D /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		6A5649872F3E522500BB0C4D /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		6A7C3A302F3E59F800F658D8 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
+		6A7C3A312F3E59F800F658D8 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		6A7C3A322F3E59F800F658D8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		6A7C3A332F3E59F800F658D8 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		6A7C3A342F3E59F800F658D8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6A7C3A532F3E5B3500F658D8 /* CircleMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleMockData.swift; sourceTree = "<group>"; };
+		6A7C3A542F3E5B3500F658D8 /* TransactionMockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionMockData.swift; sourceTree = "<group>"; };
+		6A7C3A712F3E5D7300F658D8 /* CircleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDetailView.swift; sourceTree = "<group>"; };
+		6A7C3A722F3E5D7300F658D8 /* CirclesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirclesView.swift; sourceTree = "<group>"; };
+		6A7C3A732F3E5D7300F658D8 /* MoneyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyView.swift; sourceTree = "<group>"; };
+		6A7C3A742F3E5D7300F658D8 /* SkeletonLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonLoadingView.swift; sourceTree = "<group>"; };
+		6A7C3A752F3E5D7300F658D8 /* SocialFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialFeedView.swift; sourceTree = "<group>"; };
+		6A7C3A762F3E5D7300F658D8 /* SurveyIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyIntro.swift; sourceTree = "<group>"; };
+		6A7C3A772F3E5D7300F658D8 /* SurveyStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStep1.swift; sourceTree = "<group>"; };
+		6A7C3A782F3E5D7300F658D8 /* SurveyStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStep2.swift; sourceTree = "<group>"; };
+		6A7C3A792F3E5D7300F658D8 /* SurveyStep3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyStep3.swift; sourceTree = "<group>"; };
+		6A7C3A7A2F3E5D7300F658D8 /* TabContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabContainerView.swift; sourceTree = "<group>"; };
+		6A7C3A7B2F3E5D7300F658D8 /* UserSegmentationSurveyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSegmentationSurveyView.swift; sourceTree = "<group>"; };
+		6A7C3A892F3E9FBE00F658D8 /* MemberCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCard.swift; sourceTree = "<group>"; };
+		6A7C3A8B2F3EAEAF00F658D8 /* PaymentDateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDateCard.swift; sourceTree = "<group>"; };
+		6A7C3A8C2F3EAEAF00F658D8 /* PaymentScheduleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentScheduleSection.swift; sourceTree = "<group>"; };
+		6A7C3A8D2F3EAEAF00F658D8 /* VacantPositionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacantPositionCard.swift; sourceTree = "<group>"; };
 		6F56501413E34386A09B826D /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		7B515447A9B844B2A71ED1CB /* TANDA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TANDA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82E49CCA0A594AA2AA73E24D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -85,20 +169,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2A6C509A32AB4D45857A377B /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		3942E4410D7744EEA267DFEE /* Circle */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Circle;
-			sourceTree = "<group>";
-		};
 		3CDA73DACCA142178A792774 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,16 +180,23 @@
 		4B7DCF0AB27B4B63B1CD1DC4 /* Mock */ = {
 			isa = PBXGroup;
 			children = (
+				6A7C3A532F3E5B3500F658D8 /* CircleMockData.swift */,
+				6A7C3A542F3E5B3500F658D8 /* TransactionMockData.swift */,
 				BAB33DAA41C449B98E32AD49 /* MockData.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
 		};
-		5EF6D01B4E454CD7B402D31B /* Onboarding */ = {
+		6A7C3A352F3E59F800F658D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6A7C3A302F3E59F800F658D8 /* Circle.swift */,
+				6A7C3A312F3E59F800F658D8 /* Comment.swift */,
+				6A7C3A322F3E59F800F658D8 /* Post.swift */,
+				6A7C3A332F3E59F800F658D8 /* Transaction.swift */,
+				6A7C3A342F3E59F800F658D8 /* User.swift */,
 			);
-			path = Onboarding;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6A9271382F3AF67800A321FE /* Fonts */ = {
@@ -143,12 +220,12 @@
 				C329120D2ED64C849C5ACDF2 /* App */,
 				A2A713275F9A46CCA28FBE69 /* Tokens */,
 				C63D4EE25DFA43B69175C2E1 /* Components */,
-				ACF4C6C30E96440581A9617F /* Screens */,
 				4B7DCF0AB27B4B63B1CD1DC4 /* Mock */,
 				793E617C52AE4E6E9F4A61A7 /* Resources */,
 				05E6886AC60E40F8AA11E375 /* Assets.xcassets */,
 				3CDA73DACCA142178A792774 /* Preview Content */,
 				9D77712BD7B14313AC8F399A /* Products */,
+				6A7C3A352F3E59F800F658D8 /* Models */,
 			);
 			path = TANDA;
 			sourceTree = "<group>";
@@ -172,19 +249,20 @@
 			path = Tokens;
 			sourceTree = "<group>";
 		};
-		ACF4C6C30E96440581A9617F /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				5EF6D01B4E454CD7B402D31B /* Onboarding */,
-				2A6C509A32AB4D45857A377B /* Home */,
-				3942E4410D7744EEA267DFEE /* Circle */,
-			);
-			path = Screens;
-			sourceTree = "<group>";
-		};
 		C329120D2ED64C849C5ACDF2 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				6A7C3A712F3E5D7300F658D8 /* CircleDetailView.swift */,
+				6A7C3A722F3E5D7300F658D8 /* CirclesView.swift */,
+				6A7C3A732F3E5D7300F658D8 /* MoneyView.swift */,
+				6A7C3A742F3E5D7300F658D8 /* SkeletonLoadingView.swift */,
+				6A7C3A752F3E5D7300F658D8 /* SocialFeedView.swift */,
+				6A7C3A762F3E5D7300F658D8 /* SurveyIntro.swift */,
+				6A7C3A772F3E5D7300F658D8 /* SurveyStep1.swift */,
+				6A7C3A782F3E5D7300F658D8 /* SurveyStep2.swift */,
+				6A7C3A792F3E5D7300F658D8 /* SurveyStep3.swift */,
+				6A7C3A7A2F3E5D7300F658D8 /* TabContainerView.swift */,
+				6A7C3A7B2F3E5D7300F658D8 /* UserSegmentationSurveyView.swift */,
 				6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */,
 				6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */,
 				6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */,
@@ -203,6 +281,30 @@
 		C63D4EE25DFA43B69175C2E1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6A7C3A8B2F3EAEAF00F658D8 /* PaymentDateCard.swift */,
+				6A7C3A8C2F3EAEAF00F658D8 /* PaymentScheduleSection.swift */,
+				6A7C3A8D2F3EAEAF00F658D8 /* VacantPositionCard.swift */,
+				6A7C3A892F3E9FBE00F658D8 /* MemberCard.swift */,
+				6A5649742F3E522500BB0C4D /* AvatarStack.swift */,
+				6A5649752F3E522500BB0C4D /* BalanceCard.swift */,
+				6A5649762F3E522500BB0C4D /* CategoryTag.swift */,
+				6A5649772F3E522500BB0C4D /* CircleCard.swift */,
+				6A5649782F3E522500BB0C4D /* CirclePositionRow.swift */,
+				6A5649792F3E522500BB0C4D /* CommentSection.swift */,
+				6A56497A2F3E522500BB0C4D /* JoinCircleSheet.swift */,
+				6A56497B2F3E522500BB0C4D /* PositionCircleIndicator.swift */,
+				6A56497C2F3E522500BB0C4D /* PostActions.swift */,
+				6A56497D2F3E522500BB0C4D /* PostCard.swift */,
+				6A56497E2F3E522500BB0C4D /* PostContent.swift */,
+				6A56497F2F3E522500BB0C4D /* PostHeader.swift */,
+				6A5649802F3E522500BB0C4D /* PostInputBar.swift */,
+				6A5649812F3E522500BB0C4D /* SegmentedControl.swift */,
+				6A5649822F3E522500BB0C4D /* SelectionCard.swift */,
+				6A5649832F3E522500BB0C4D /* SheetIntro.swift */,
+				6A5649842F3E522500BB0C4D /* SpinningLoader.swift */,
+				6A5649852F3E522500BB0C4D /* StatusPill.swift */,
+				6A5649862F3E522500BB0C4D /* TabBar.swift */,
+				6A5649872F3E522500BB0C4D /* TransactionRow.swift */,
 				0AEC6AB176A4469CBB5C7093 /* PrimaryButton.swift */,
 				19CBD829BAE84196A13F68DC /* Input.swift */,
 				6F56501413E34386A09B826D /* PageView.swift */,
@@ -290,7 +392,36 @@
 				A154B6B2E59746089F48DB30 /* TANDATypography.swift in Sources */,
 				E2C74D2057E54E7DAF5A3199 /* PrimaryButton.swift in Sources */,
 				539A8C189E194092B2062B96 /* Input.swift in Sources */,
+				6A5649882F3E522500BB0C4D /* PostActions.swift in Sources */,
+				6A5649892F3E522500BB0C4D /* PostCard.swift in Sources */,
+				6A56498A2F3E522500BB0C4D /* PostInputBar.swift in Sources */,
+				6A56498B2F3E522500BB0C4D /* CircleCard.swift in Sources */,
+				6A56498C2F3E522500BB0C4D /* PositionCircleIndicator.swift in Sources */,
+				6A56498D2F3E522500BB0C4D /* SelectionCard.swift in Sources */,
+				6A56498E2F3E522500BB0C4D /* SegmentedControl.swift in Sources */,
+				6A56498F2F3E522500BB0C4D /* AvatarStack.swift in Sources */,
+				6A5649902F3E522500BB0C4D /* CirclePositionRow.swift in Sources */,
+				6A5649912F3E522500BB0C4D /* JoinCircleSheet.swift in Sources */,
+				6A5649922F3E522500BB0C4D /* BalanceCard.swift in Sources */,
+				6A5649932F3E522500BB0C4D /* PostContent.swift in Sources */,
+				6A5649942F3E522500BB0C4D /* SheetIntro.swift in Sources */,
+				6A5649952F3E522500BB0C4D /* SpinningLoader.swift in Sources */,
+				6A5649962F3E522500BB0C4D /* StatusPill.swift in Sources */,
+				6A5649972F3E522500BB0C4D /* CategoryTag.swift in Sources */,
+				6A5649982F3E522500BB0C4D /* CommentSection.swift in Sources */,
+				6A7C3A362F3E59F800F658D8 /* User.swift in Sources */,
+				6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */,
+				6A7C3A8A2F3E9FBE00F658D8 /* MemberCard.swift in Sources */,
+				6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */,
+				6A7C3A392F3E59F800F658D8 /* Transaction.swift in Sources */,
+				6A7C3A3A2F3E59F800F658D8 /* Circle.swift in Sources */,
+				6A5649992F3E522500BB0C4D /* TabBar.swift in Sources */,
+				6A56499A2F3E522500BB0C4D /* TransactionRow.swift in Sources */,
+				6A56499B2F3E522500BB0C4D /* PostHeader.swift in Sources */,
 				48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */,
+				6A7C3A8E2F3EAEAF00F658D8 /* PaymentScheduleSection.swift in Sources */,
+				6A7C3A8F2F3EAEAF00F658D8 /* PaymentDateCard.swift in Sources */,
+				6A7C3A902F3EAEAF00F658D8 /* VacantPositionCard.swift in Sources */,
 				D25C4AA923F64179A24E4A67 /* SheetHeader.swift in Sources */,
 				499CAECE07C5440D937BF241 /* SheetLayout.swift in Sources */,
 				700749B64A1A47D09F5D8D06 /* ButtonDock.swift in Sources */,
@@ -299,6 +430,8 @@
 				6A2C7F812F3955C900BA430D /* LegalStep.swift in Sources */,
 				6A2C7F822F3955C900BA430D /* NameStep.swift in Sources */,
 				6A2C7F832F3955C900BA430D /* PasswordStrengthBar.swift in Sources */,
+				6A7C3A552F3E5B3500F658D8 /* CircleMockData.swift in Sources */,
+				6A7C3A562F3E5B3500F658D8 /* TransactionMockData.swift in Sources */,
 				6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */,
 				6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */,
 				6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */,
@@ -313,6 +446,17 @@
 				6A2C7F8F2F3955C900BA430D /* OTPInput.swift in Sources */,
 				6A2C7F902F3955C900BA430D /* ProgressBar.swift in Sources */,
 				6A2C7F912F3955C900BA430D /* AvatarUpload.swift in Sources */,
+				6A7C3A7C2F3E5D7300F658D8 /* SurveyStep2.swift in Sources */,
+				6A7C3A7D2F3E5D7300F658D8 /* CircleDetailView.swift in Sources */,
+				6A7C3A7E2F3E5D7300F658D8 /* MoneyView.swift in Sources */,
+				6A7C3A7F2F3E5D7300F658D8 /* CirclesView.swift in Sources */,
+				6A7C3A802F3E5D7300F658D8 /* SkeletonLoadingView.swift in Sources */,
+				6A7C3A812F3E5D7300F658D8 /* SurveyIntro.swift in Sources */,
+				6A7C3A822F3E5D7300F658D8 /* SurveyStep3.swift in Sources */,
+				6A7C3A832F3E5D7300F658D8 /* UserSegmentationSurveyView.swift in Sources */,
+				6A7C3A842F3E5D7300F658D8 /* SocialFeedView.swift in Sources */,
+				6A7C3A852F3E5D7300F658D8 /* SurveyStep1.swift in Sources */,
+				6A7C3A862F3E5D7300F658D8 /* TabContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,7 +49,7 @@ struct SheetLayout<Header: View, Body: View, Footer: View>: View {
                 // BODY - Scrollable
                 ScrollView {
                     bodyContent()
-                        .padding(.bottom, showFooter ? 140 : TANDASpacing.md)
+                        .padding(.bottom, TANDASpacing.md)
                 }
             }
 

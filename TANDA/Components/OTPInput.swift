@@ -48,7 +48,7 @@ struct OTPInput: View {
 
         return ZStack {
             RoundedRectangle(cornerRadius: TANDARadius.md)
-                .fill(TANDAColors.Neutral.n800)
+                .fill(TANDAColors.Neutral.n0)
                 .overlay(
                     RoundedRectangle(cornerRadius: TANDARadius.md)
                         .stroke(
@@ -74,9 +74,9 @@ struct OTPInput: View {
 
     private func borderColor(isFilled: Bool, isCurrentIndex: Bool) -> Color {
         if isFilled || (isCurrentIndex && isFocused) {
-            return TANDAColors.Brand.primary
+            return TANDAColors.Neutral.n900
         }
-        return TANDAColors.Neutral.n700
+        return TANDAColors.Neutral.n300
     }
 }
 

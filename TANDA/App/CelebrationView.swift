@@ -14,12 +14,12 @@ struct CelebrationView: View {
                 Spacer()
 
                 ZStack {
-                    Circle()
+                    SwiftUI.Circle()
                         .fill(TANDAColors.Brand.primary.opacity(0.2))
                         .frame(width: 124, height: 124)
                         .scaleEffect(animate ? 1.0 : 0.8)
 
-                    Circle()
+                    SwiftUI.Circle()
                         .fill(TANDAColors.Brand.primary)
                         .frame(width: 100, height: 100)
                         .scaleEffect(animate ? 1.0 : 0.5)
@@ -33,7 +33,7 @@ struct CelebrationView: View {
 
                 Text("You're In!")
                     .font(TANDATypography.Display.m)
-                    .foregroundStyle(TANDAColors.Neutral.n900)
+                    .foregroundStyle(TANDAColors.Text.primary)
                     .opacity(showContent ? 1.0 : 0.0)
                     .offset(y: showContent ? 0 : 20)
                     .padding(.bottom, TANDASpacing.sm)

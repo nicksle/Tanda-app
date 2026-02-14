@@ -13,15 +13,17 @@ struct CreatePasswordStep: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("Create a Password")
-                .font(TANDATypography.Heading.l)
-                .foregroundStyle(TANDAColors.Text.primary)
-                .padding(.bottom, TANDASpacing.xs)
+            VStack(alignment: .leading, spacing: TANDASpacing.xs) {
+                Text("Create a Password")
+                    .font(TANDATypography.Display.m)
+                    .foregroundStyle(TANDAColors.Text.primary)
 
-            Text("Choose a strong password to keep your account secure.")
-                .font(TANDATypography.Paragraph.m)
-                .foregroundStyle(TANDAColors.Text.secondary)
-                .padding(.bottom, TANDASpacing.lg)
+                Text("Choose a strong password to keep your account secure.")
+                    .font(TANDATypography.Paragraph.l)
+                    .foregroundStyle(TANDAColors.Text.secondary)
+            }
+            .padding(.bottom, TANDASpacing.lg)
+            .padding(.horizontal, TANDASpacing.sm)
 
             Input(
                 text: $password,
@@ -29,10 +31,8 @@ struct CreatePasswordStep: View {
                 label: "Password",
                 placeholder: "Create a password"
             )
-            .padding(.bottom, TANDASpacing.sm)
-
-            PasswordStrengthBar(password: password)
-                .padding(.bottom, TANDASpacing.lg)
+            .padding(.bottom, TANDASpacing.lg)
+            .padding(.horizontal, TANDASpacing.sm)
 
             Input(
                 text: $confirmPassword,
@@ -41,8 +41,9 @@ struct CreatePasswordStep: View {
                 placeholder: "Re-enter your password",
                 error: passwordMismatchError
             )
+            .padding(.horizontal, TANDASpacing.sm)
         }
-        .padding(.horizontal, TANDASpacing.lg)
+        .padding(.horizontal, TANDASpacing.md)
     }
 
     private var passwordMismatchError: String? {

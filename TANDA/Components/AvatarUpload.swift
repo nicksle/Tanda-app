@@ -15,17 +15,17 @@ struct AvatarUpload: View {
             onTap?()
         } label: {
             ZStack(alignment: .bottomTrailing) {
-                Circle()
+                SwiftUI.Circle()
                     .fill(avatarBackground)
                     .frame(width: avatarSize, height: avatarSize)
                     .overlay { avatarContent }
 
                 ZStack {
-                    Circle()
+                    SwiftUI.Circle()
                         .fill(TANDAColors.Brand.primary)
                         .frame(width: badgeSize, height: badgeSize)
                         .overlay(
-                            Circle().stroke(TANDAColors.Neutral.n900, lineWidth: 3)
+                            SwiftUI.Circle().stroke(TANDAColors.Neutral.n900, lineWidth: 3)
                         )
 
                     Image(systemName: initials != nil ? "pencil" : "plus")
@@ -61,7 +61,7 @@ struct AvatarUpload: View {
         } else {
             Image(systemName: "person.fill")
                 .font(.system(size: 40))
-                .foregroundStyle(TANDAColors.Neutral.n500)
+                .foregroundStyle(TANDAColors.Text.secondary)
         }
     }
 }

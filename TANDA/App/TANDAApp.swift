@@ -22,18 +22,33 @@ class AppState: ObservableObject {
     enum AppScreen {
         case onboardingSplash  // New carousel splash
         case onboarding        // Account setup flow
+        case loadingHome       // Skeleton loading after onboarding
         case home
     }
 
-    @Published var currentScreen: AppScreen = .onboardingSplash
+    @Published var currentScreen: AppScreen = .home  // .onboardingSplash for production
     @Published var isOnboardingComplete: Bool = false
     @Published var authEmail: String = ""
     @Published var isExistingAccount: Bool = false
+    @Published var surveyResponses: [String: [String]] = [:]
+    @Published var surveySkipped: Bool = false
+
+    // Social Feed State
+    @Published var currentUser: User = MockData.feedUsers[4]  // Sarah Kim
+    @Published var posts: [Post] = MockData.samplePosts
 
     func completeOnboarding() {
-        withAnimation(.easeInOut(duration: 0.5)) {
+        // Fade to loading screen
+        withAnimation(.easeOut(duration: 0.3)) {
+            currentScreen = .loadingHome
             isOnboardingComplete = true
-            currentScreen = .home
+        }
+
+        // After 2 seconds, fade to home
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            withAnimation(.easeInOut(duration: 0.6)) {
+                self.currentScreen = .home
+            }
         }
     }
 
@@ -51,6 +66,43 @@ class AppState: ObservableObject {
             isExistingAccount = false
         }
     }
+
+    // MARK: - Social Feed Actions
+
+    func addPost(content: String, imageURL: String?) {
+        let newPost = Post(
+            user: currentUser,
+            content: content,
+            imageURL: imageURL
+        )
+        posts.insert(newPost, at: 0)  // Add to top of feed
+    }
+
+    func toggleLike(on post: Post) {
+        guard let index = posts.firstIndex(where: { $0.id == post.id }) else { return }
+
+        var updatedPost = posts[index]
+
+        if let likeIndex = updatedPost.likes.firstIndex(where: { $0.id == currentUser.id }) {
+            // Unlike: remove current user from likes
+            updatedPost.likes.remove(at: likeIndex)
+        } else {
+            // Like: add current user to likes
+            updatedPost.likes.append(currentUser)
+        }
+
+        posts[index] = updatedPost
+    }
+
+    func addComment(to post: Post, text: String) {
+        guard let index = posts.firstIndex(where: { $0.id == post.id }) else { return }
+
+        var updatedPost = posts[index]
+        let newComment = Comment(user: currentUser, text: text)
+        updatedPost.comments.append(newComment)
+
+        posts[index] = updatedPost
+    }
 }
 
 // MARK: - Root View
@@ -66,10 +118,18 @@ struct RootView: View {
                     .transition(AnyTransition.opacity)
             case .onboarding:
                 OnboardingContainerView()
-                    .transition(.move(edge: .trailing))
+                    .transition(
+                        .asymmetric(
+                            insertion: .move(edge: .trailing),
+                            removal: .opacity
+                        )
+                    )
+            case .loadingHome:
+                SkeletonLoadingView()
+                    .transition(AnyTransition.opacity)
             case .home:
-                HomeScreen()
-                    .transition(.move(edge: .trailing))
+                TabContainerView()
+                    .transition(AnyTransition.opacity)
             }
         }
         .animation(.easeInOut(duration: 0.4), value: appState.currentScreen)
@@ -89,7 +149,7 @@ struct SplashScreen: View {
             
             // Logo placeholder
             ZStack {
-                Circle()
+                SwiftUI.Circle()
                     .fill(TANDAColors.Purple.p500.opacity(0.15))
                     .frame(width: 120, height: 120)
                 
@@ -101,11 +161,11 @@ struct SplashScreen: View {
             VStack(spacing: TANDASpacing.sm) {
                 Text("TANDA")
                     .font(TANDATypography.Display.xl)
-                    .foregroundStyle(TANDAColors.Neutral.n900)
-                
+                    .foregroundStyle(TANDAColors.Text.primary)
+
                 Text("Save together")
                     .font(TANDATypography.Paragraph.l)
-                    .foregroundStyle(TANDAColors.Neutral.n500)
+                    .foregroundStyle(TANDAColors.Text.secondary)
             }
             
             Spacer()
@@ -139,7 +199,7 @@ struct OnboardingFlow: View {
                     .font(TANDATypography.Display.m)
                 Text("Join your first savings circle")
                     .font(TANDATypography.Paragraph.m)
-                    .foregroundStyle(TANDAColors.Neutral.n500)
+                    .foregroundStyle(TANDAColors.Text.secondary)
             }
         } body: {
             VStack(spacing: TANDASpacing.lg) {
@@ -181,7 +241,7 @@ struct HomeScreen: View {
                         .font(TANDATypography.Display.m)
                     Text("You've saved $\(Int(MockData.totalSaved)) so far")
                         .font(TANDATypography.Paragraph.m)
-                        .foregroundStyle(TANDAColors.Neutral.n500)
+                        .foregroundStyle(TANDAColors.Text.secondary)
                 }
             } body: {
                 VStack(spacing: TANDASpacing.lg) {
@@ -215,7 +275,7 @@ struct HomeScreen: View {
                             .font(TANDATypography.Heading.m)
                         
                         ForEach(MockData.recentTransactions) { tx in
-                            TransactionRow(transaction: tx)
+                            PreviewTransactionRow(transaction: tx)
                         }
                     }
                 }
@@ -225,18 +285,18 @@ struct HomeScreen: View {
     }
 }
 
-// MARK: - Temp Home Components (will move to Components/ in Sprint 3)
+// MARK: - Preview Components
 
 struct StatCard: View {
     let label: String
     let value: String
     let color: Color
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: TANDASpacing.xs) {
             Text(label)
                 .font(TANDATypography.Label.s)
-                .foregroundStyle(TANDAColors.Neutral.n500)
+                .foregroundStyle(TANDAColors.Text.secondary)
             Text(value)
                 .font(TANDATypography.Heading.l)
                 .foregroundStyle(color)
@@ -250,7 +310,7 @@ struct StatCard: View {
 
 struct CircleRow: View {
     let circle: MockCircle
-    
+
     var body: some View {
         HStack(spacing: TANDASpacing.sm + 4) {
             Text(circle.emoji)
@@ -258,23 +318,23 @@ struct CircleRow: View {
                 .frame(width: 48, height: 48)
                 .background(TANDAColors.Neutral.n100)
                 .clipShape(RoundedRectangle(cornerRadius: TANDARadius.md))
-            
+
             VStack(alignment: .leading, spacing: 2) {
                 Text(circle.name)
                     .font(TANDATypography.Heading.s)
                 Text("\(circle.memberCount) members · \(circle.frequency)")
                     .font(TANDATypography.Paragraph.s)
-                    .foregroundStyle(TANDAColors.Neutral.n500)
+                    .foregroundStyle(TANDAColors.Text.secondary)
             }
-            
+
             Spacer()
-            
+
             VStack(alignment: .trailing, spacing: 2) {
                 Text("$\(Int(circle.totalPool))")
                     .font(TANDATypography.Label.m)
                 Text("pool")
                     .font(TANDATypography.Label.xs)
-                    .foregroundStyle(TANDAColors.Neutral.n400)
+                    .foregroundStyle(TANDAColors.Text.tertiary)
             }
         }
         .padding(TANDASpacing.sm + 4)
@@ -284,34 +344,34 @@ struct CircleRow: View {
     }
 }
 
-struct TransactionRow: View {
+struct PreviewTransactionRow: View {
     let transaction: MockTransaction
-    
+
     var body: some View {
         HStack(spacing: TANDASpacing.sm + 4) {
             Text(transaction.circleEmoji)
                 .font(.system(size: 20))
                 .frame(width: 40, height: 40)
                 .background(TANDAColors.Neutral.n100)
-                .clipShape(Circle())
-            
+                .clipShape(SwiftUI.Circle())
+
             VStack(alignment: .leading, spacing: 2) {
                 Text(transaction.title)
                     .font(TANDATypography.Label.m)
                 Text(transaction.subtitle)
                     .font(TANDATypography.Paragraph.s)
-                    .foregroundStyle(TANDAColors.Neutral.n500)
+                    .foregroundStyle(TANDAColors.Text.secondary)
             }
-            
+
             Spacer()
-            
+
             VStack(alignment: .trailing, spacing: 2) {
                 Text("\(transaction.isCredit ? "+" : "-")$\(Int(transaction.amount))")
                     .font(TANDATypography.Label.m)
                     .foregroundStyle(transaction.isCredit ? TANDAColors.Feedback.green : TANDAColors.Neutral.n900)
                 Text(transaction.date)
                     .font(TANDATypography.Label.xs)
-                    .foregroundStyle(TANDAColors.Neutral.n400)
+                    .foregroundStyle(TANDAColors.Text.tertiary)
             }
         }
         .padding(.vertical, TANDASpacing.sm)

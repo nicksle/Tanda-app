@@ -48,15 +48,15 @@ struct Checkbox: View {
             let beforeLink = String(label[..<linkRange.lowerBound])
             let afterLink = String(label[linkRange.upperBound...])
 
-            (Text(beforeLink).foregroundStyle(TANDAColors.Neutral.n400) +
+            (Text(beforeLink).foregroundStyle(TANDAColors.Text.tertiary) +
              Text(linkText).foregroundStyle(TANDAColors.Brand.primary).underline() +
-             Text(afterLink).foregroundStyle(TANDAColors.Neutral.n400))
+             Text(afterLink).foregroundStyle(TANDAColors.Text.tertiary))
                 .font(TANDATypography.Paragraph.s)
                 .multilineTextAlignment(.leading)
         } else {
             Text(label)
                 .font(TANDATypography.Paragraph.s)
-                .foregroundStyle(TANDAColors.Neutral.n400)
+                .foregroundStyle(TANDAColors.Text.tertiary)
                 .multilineTextAlignment(.leading)
         }
     }

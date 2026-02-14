@@ -38,7 +38,7 @@ struct PrimaryButtonDock<Accessory: View>: View {
             }
             .padding(.horizontal, TANDASpacing.md)
             .padding(.top, TANDASpacing.md)
-            .padding(.bottom, 34) // Safe area for home indicator
+            .padding(.bottom, TANDASpacing.lg) // Safe area for home indicator (24px)
         }
         .frame(maxWidth: .infinity)
         .background(

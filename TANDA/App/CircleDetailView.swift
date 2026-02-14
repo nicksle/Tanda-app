@@ -42,14 +42,13 @@ struct CircleDetailView: View {
                     )
                     .padding(.horizontal, TANDASpacing.lg)
                     .padding(.vertical, TANDASpacing.md)
-                    .background(Color.white.opacity(0.95))
                 }
             }
             .padding(.bottom, 160) // Add padding for the sheet
         }
         .background(
             LinearGradient(
-                gradient: Gradient(colors: [TANDAColors.Neutral.n50, Color.white]),
+                gradient: Gradient(colors: [Color.white, TANDAColors.Neutral.n50]),
                 startPoint: .top,
                 endPoint: .bottom
             )
@@ -215,7 +214,15 @@ struct CircleHeaderSection: View {
                 .foregroundStyle(TANDAColors.Text.primary)
                 .padding(.top, -32)
 
-            // 2×2 Metrics Grid
+            // Description text
+            Text(circle.description)
+                .font(.system(size: 15, weight: .regular))
+                .foregroundStyle(TANDAColors.Text.secondary)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal, TANDASpacing.md)
+                .padding(.top, TANDASpacing.xs)
+
+            // Metrics Grid
             VStack(spacing: TANDASpacing.sm) {
                 // Row 1: Start Date | Payout
                 HStack(spacing: TANDASpacing.sm) {
@@ -226,14 +233,11 @@ struct CircleHeaderSection: View {
                         .frame(maxWidth: .infinity)
                 }
 
-                // Row 2: Duration | Members
-                HStack(spacing: TANDASpacing.sm) {
-                    InfoItem(label: "Duration", value: circle.duration)
-                        .frame(maxWidth: .infinity)
-
-                    InfoItem(label: "Members", value: "\(circle.totalPositions - circle.openPositionsCount)/\(circle.totalPositions)")
-                        .frame(maxWidth: .infinity)
-                }
+                // Row 2: Duration (full width, includes member count)
+                InfoItem(
+                    label: "Duration",
+                    value: "\(circle.duration) • \(circle.totalPositions - circle.openPositionsCount)/\(circle.totalPositions) members"
+                )
             }
         }
         .padding(.horizontal, TANDASpacing.lg)
@@ -270,11 +274,6 @@ struct MembersTab: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: TANDASpacing.sm) {
-            Text("Positions (\(circle.filledPositions.count)/\(circle.totalPositions))")
-                .font(.system(size: 18, weight: .bold))
-                .foregroundStyle(TANDAColors.Text.primary)
-                .padding(.horizontal, TANDASpacing.lg)
-
             LazyVStack(spacing: TANDASpacing.sm) {
                 if circle.positions.isEmpty {
                     // Fallback for circles without position data
@@ -283,10 +282,10 @@ struct MembersTab: View {
                             ZStack {
                                 SwiftUI.Circle()
                                     .fill(member.avatarColor)
-                                    .frame(width: 40, height: 40)
+                                    .frame(width: 48, height: 48)
 
                                 Text(member.initials)
-                                    .font(.system(size: 16, weight: .medium))
+                                    .font(.system(size: 18, weight: .medium))
                                     .foregroundStyle(.white)
                             }
 
@@ -305,8 +304,13 @@ struct MembersTab: View {
                                 .clipShape(Capsule())
                         }
                         .padding(TANDASpacing.md)
-                        .background(TANDAColors.Surface.primary)
+                        .background(Color.white)
                         .clipShape(RoundedRectangle(cornerRadius: TANDARadius.lg))
+                        .shadow(color: Color.black.opacity(0.08), radius: 8, x: 0, y: 2)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: TANDARadius.lg)
+                                .stroke(TANDAColors.Neutral.n200, lineWidth: 1)
+                        )
                     }
                 } else {
                     ForEach(circle.positions) { position in

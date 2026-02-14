@@ -26,10 +26,10 @@ struct MemberCard: View {
                         ZStack {
                             SwiftUI.Circle()
                                 .fill(member.avatarColor)
-                                .frame(width: 40, height: 40)
+                                .frame(width: 48, height: 48)
 
                             Text(member.initials)
-                                .font(.system(size: 16, weight: .medium))
+                                .font(.system(size: 18, weight: .medium))
                                 .foregroundStyle(.white)
                         }
 
@@ -63,8 +63,13 @@ struct MemberCard: View {
                 .padding(TANDASpacing.md)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(TANDAColors.Surface.primary)
+        .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: TANDARadius.lg))
+        .shadow(color: Color.black.opacity(0.08), radius: 8, x: 0, y: 2)
+        .overlay(
+            RoundedRectangle(cornerRadius: TANDARadius.lg)
+                .stroke(TANDAColors.Neutral.n200, lineWidth: 1)
+        )
     }
 }
 

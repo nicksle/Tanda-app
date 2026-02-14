@@ -86,7 +86,7 @@ struct SlideView: View {
         VStack {
             HStack {
                 Text(headline)
-                    .font(TANDATypography.Display.m)
+                    .font(TANDATypography.Display.xl)
                     .foregroundStyle(.white)
                     .shadow(color: .black.opacity(0.3), radius: 20, y: 2)
                     .frame(maxWidth: 280, alignment: .leading)

@@ -9,9 +9,10 @@ struct OnboardingContainerView: View {
     @State private var confirmPassword = ""
     @State private var firstName = ""
     @State private var lastName = ""
-    @State private var agreedToTerms = false
-    @State private var agreedToPrivacy = false
+    @State private var preferredName = ""
+    @State private var agreedToLegal = false
     @State private var hasPhoto = false
+    @State private var showSurvey = false
     @EnvironmentObject var appState: AppState
 
     private let totalSteps = 4
@@ -19,7 +20,7 @@ struct OnboardingContainerView: View {
     var body: some View {
         SheetLayout(
             type: .immersive,
-            title: "",
+            title: "Create Account",
             showLeftAction: true,
             leftAction: { goBack() },
             showRightAction: false
@@ -30,11 +31,29 @@ struct OnboardingContainerView: View {
                     .padding(.bottom, TANDASpacing.lg)
 
                 stepContent
-
-                Spacer()
+                    .transition(
+                        .asymmetric(
+                            insertion: .move(edge: .trailing).combined(with: .opacity),
+                            removal: .move(edge: .leading).combined(with: .opacity)
+                        )
+                    )
+                    .id(currentStep)
             }
         } footer: {
             buttonDock
+        }
+        .sheet(isPresented: $showSurvey) {
+            UserSegmentationSurveyView(
+                firstName: !preferredName.isEmpty ? preferredName : firstName,
+                hasPhoto: hasPhoto,
+                onComplete: {
+                    // Dismiss survey - loading screen already underneath
+                    showSurvey = false
+                }
+            )
+            .environmentObject(appState)
+            .presentationDetents([PresentationDetent.large])
+            .interactiveDismissDisabled()
         }
     }
 
@@ -44,13 +63,11 @@ struct OnboardingContainerView: View {
         case 1:
             CreatePasswordStep(password: $password, confirmPassword: $confirmPassword)
         case 2:
-            NameStep(firstName: $firstName, lastName: $lastName)
+            NameStep(firstName: $firstName, lastName: $lastName, preferredName: $preferredName)
         case 3:
-            LegalStep(agreedToTerms: $agreedToTerms, agreedToPrivacy: $agreedToPrivacy)
+            LegalStep()
         case 4:
-            PhotoStep(hasPhoto: $hasPhoto, firstName: firstName, lastName: lastName) {
-                completeOnboarding()
-            }
+            PhotoStep(hasPhoto: $hasPhoto, firstName: firstName, lastName: lastName, onComplete: {})
         default:
             EmptyView()
         }
@@ -58,7 +75,24 @@ struct OnboardingContainerView: View {
 
     @ViewBuilder
     private var buttonDock: some View {
-        if currentStep == 4 {
+        if currentStep == 3 {
+            PrimaryButtonDock {
+                Checkbox(
+                    isChecked: $agreedToLegal,
+                    label: "By checking this box, you ceritfy that you're 18 years old or older, and you agree to the User Agreement and Policy Service and Privacy Policy.",
+                    linkText: nil
+                )
+            } buttons: {
+                PrimaryButton(
+                    "Continue",
+                    kind: .primary,
+                    isDisabled: !isCurrentStepValid,
+                    isFullWidth: true
+                ) {
+                    goToNextStep()
+                }
+            }
+        } else if currentStep == 4 {
             PrimaryButtonDock {
                 PrimaryButton(
                     hasPhoto ? "Continue" : "Add Photo",
@@ -66,13 +100,13 @@ struct OnboardingContainerView: View {
                     isFullWidth: true
                 ) {
                     if hasPhoto {
-                        completeOnboarding()
+                        showSurveyView()
                     } else {
                         hasPhoto = true
                     }
                 }
                 PrimaryButton("Skip for Now", kind: .tertiary) {
-                    completeOnboarding()
+                    showSurveyView()
                 }
             }
         } else {
@@ -94,7 +128,7 @@ struct OnboardingContainerView: View {
         case 1: return password.count >= 8 && password == confirmPassword
         case 2: return !firstName.trimmingCharacters(in: .whitespaces).isEmpty &&
                        !lastName.trimmingCharacters(in: .whitespaces).isEmpty
-        case 3: return agreedToTerms && agreedToPrivacy
+        case 3: return agreedToLegal
         case 4: return true
         default: return false
         }
@@ -111,6 +145,16 @@ struct OnboardingContainerView: View {
         guard currentStep < totalSteps else { return }
         withAnimation(.easeInOut(duration: 0.3)) {
             currentStep += 1
+        }
+    }
+
+    private func showSurveyView() {
+        // Transition onboarding to loading screen immediately
+        completeOnboarding()
+
+        // Small delay, then show survey over the loading screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            showSurvey = true
         }
     }
 

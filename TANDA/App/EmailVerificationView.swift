@@ -21,7 +21,7 @@ struct EmailVerificationView: View {
             showRightAction: true,
             rightAction: { dismiss() }
         ) {
-            VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 0) {
                 Spacer()
 
                 ZStack {
@@ -47,37 +47,22 @@ struct EmailVerificationView: View {
                 }
                 .padding(.bottom, TANDASpacing.xl)
 
-                Text("Check Your Email")
-                    .font(TANDATypography.Heading.l)
-                    .foregroundStyle(TANDAColors.Neutral.n900)
+                Text("Please verify your email address")
+                    .font(TANDATypography.Display.l)
+                    .foregroundStyle(TANDAColors.Text.primary)
                     .padding(.bottom, TANDASpacing.sm)
 
-                Text("We sent a verification code to")
+                Text("We've sent an email to \(appState.authEmail). Please enter the 6 digit code below.")
                     .font(TANDATypography.Paragraph.m)
                     .foregroundStyle(TANDAColors.Text.secondary)
-
-                Text(appState.authEmail)
-                    .font(TANDATypography.Paragraph.m)
-                    .fontWeight(.medium)
-                    .foregroundStyle(TANDAColors.Neutral.n900)
+                    .fixedSize(horizontal: false, vertical: true)
                     .padding(.bottom, TANDASpacing.xl)
 
                 OTPInput(code: $otpCode)
-                    .padding(.horizontal, TANDASpacing.lg)
-                    .padding(.bottom, TANDASpacing.lg)
-
-                if resendCountdown > 0 {
-                    Text("Resend code in \(resendCountdown)s")
-                        .font(TANDATypography.Paragraph.s)
-                        .foregroundStyle(TANDAColors.Text.tertiary)
-                } else {
-                    Button("Resend code") { resendCountdown = 60 }
-                        .font(TANDATypography.Paragraph.s)
-                        .foregroundStyle(TANDAColors.Brand.primary)
-                }
 
                 Spacer()
             }
+            .padding(.horizontal, TANDASpacing.md)
         } footer: {
             PrimaryButtonDock {
                 PrimaryButton(
@@ -92,6 +77,23 @@ struct EmailVerificationView: View {
                         isVerifying = false
                         showCelebration = true
                     }
+                }
+
+                PrimaryButton(
+                    "Need Help?",
+                    kind: .secondary,
+                    isFullWidth: true
+                ) {
+                    // TODO: Show help/support options
+                }
+
+                PrimaryButton(
+                    resendCountdown > 0 ? "Resend Code (\(resendCountdown)s)" : "Resend Code",
+                    kind: .tertiary,
+                    isDisabled: resendCountdown > 0,
+                    isFullWidth: true
+                ) {
+                    resendCountdown = 60
                 }
             }
         }
