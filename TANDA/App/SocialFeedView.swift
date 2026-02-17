@@ -8,6 +8,8 @@ struct SocialFeedView: View {
     @State private var showingCommentInput: Post? = nil
     @State private var selectedCarouselVariation: OnboardingVariation = .standard
     @State private var scrollOffset: CGFloat = 0
+    @State private var showKYCFlow = false
+    @State private var showCirclesIntro = false
 
     private var currentUser: User {
         appState.currentUser
@@ -81,7 +83,12 @@ struct SocialFeedView: View {
                         .padding(.bottom, TANDASpacing.xs)
 
                     // Onboarding carousel
-                    OnboardingCarouselContainer(selectedVariation: selectedCarouselVariation)
+                    OnboardingCarouselContainer(
+                        selectedVariation: selectedCarouselVariation,
+                        onCTATapped: { index in
+                            handleCarouselCTA(index)
+                        }
+                    )
                     .padding(.bottom, TANDASpacing.md)
 
                     // Feed posts
@@ -131,6 +138,39 @@ struct SocialFeedView: View {
                     showingCommentInput = nil
                 }
             )
+        }
+        .fullScreenCover(isPresented: $showKYCFlow) {
+            KYCVerificationView()
+                .environmentObject(appState)
+        }
+        .fullScreenCover(isPresented: $showCirclesIntro) {
+            ExploreCirclesIntroView(onContinue: {
+                // Navigate to circles tab after intro
+                appState.selectedTab = .circles
+            })
+            .environmentObject(appState)
+        }
+    }
+
+    // MARK: - Helper Functions
+
+    private func handleCarouselCTA(_ index: Int) {
+        // Index 0 is "Explore TANDA Circles"
+        if index == 0 {
+            if appState.hasSeenCirclesIntro {
+                // If already seen intro, navigate directly to circles tab
+                appState.selectedTab = .circles
+            } else {
+                // Show intro first
+                showCirclesIntro = true
+            }
+        }
+        // Index 2 is "Verify Identity" (third item in onboardingSteps array)
+        else if index == 2 {
+            showKYCFlow = true
+        } else {
+            print("CTA \(index) tapped")
+            // TODO: Handle other carousel CTAs
         }
     }
 }
@@ -242,11 +282,12 @@ private let onboardingSteps: [OnboardingStep] = [
 
 private struct OnboardingCarouselContainer: View {
     let selectedVariation: OnboardingVariation
+    let onCTATapped: (Int) -> Void
 
     var body: some View {
         switch selectedVariation {
         case .standard:
-            StandardCarousel()
+            StandardCarousel(onCTATapped: onCTATapped)
         case .progressBar:
             ProgressBarCarousel()
         case .timeline:
@@ -259,9 +300,10 @@ private struct OnboardingCarouselContainer: View {
 
 private struct StandardCarousel: View {
     @State private var currentPage: Int = 0
+    let onCTATapped: (Int) -> Void
 
     var body: some View {
-        VStack(spacing: TANDASpacing.md) {
+        VStack(spacing: 0) {
             // Paginated carousel using TabView
             TabView(selection: $currentPage) {
                 ForEach(Array(onboardingSteps.enumerated()), id: \.offset) { index, step in
@@ -271,7 +313,7 @@ private struct StandardCarousel: View {
                         description: step.description,
                         ctaText: step.ctaText,
                         onCTATapped: {
-                            print("CTA \(index) tapped")
+                            onCTATapped(index)
                         }
                     )
                     .tag(index)
@@ -289,9 +331,7 @@ private struct StandardCarousel: View {
                         .animation(.spring(response: 0.3, dampingFraction: 0.7), value: currentPage)
                 }
             }
-            .padding(.bottom, TANDASpacing.xs)
         }
-        .padding(.vertical, TANDASpacing.md)
     }
 }
 
@@ -351,7 +391,7 @@ private struct StandardCarouselCard: View {
         .frame(maxWidth: .infinity)
         .background(Color.white)
         .clipShape(RoundedRectangle(cornerRadius: TANDARadius.xl))
-        .shadow(color: Color.black.opacity(0.08), radius: 12, x: 0, y: 4)
+        .shadow(color: Color.black.opacity(0.08), radius: 6, x: 0, y: 2)
         .padding(.horizontal, TANDASpacing.md)
     }
 }

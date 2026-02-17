@@ -17,6 +17,7 @@
 		6A2C7F822F3955C900BA430D /* NameStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F722F3955C900BA430D /* NameStep.swift */; };
 		6A2C7F832F3955C900BA430D /* PasswordStrengthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */; };
 		6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */; };
+		55E86FB2F7B2401DB5313B56 /* ExploreCirclesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */; };
 		6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F772F3955C900BA430D /* PhotoStep.swift */; };
 		6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F782F3955C900BA430D /* SignUpSheet.swift */; };
 		6A2C7F872F3955C900BA430D /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7D2F3955C900BA430D /* Divider.swift */; };
@@ -50,6 +51,9 @@
 		6A5649992F3E522500BB0C4D /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649862F3E522500BB0C4D /* TabBar.swift */; };
 		6A56499A2F3E522500BB0C4D /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649872F3E522500BB0C4D /* TransactionRow.swift */; };
 		6A56499B2F3E522500BB0C4D /* PostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497F2F3E522500BB0C4D /* PostHeader.swift */; };
+		6A665D492F43F2C5009B4DC4 /* ImageUploadCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */; };
+		6A665D4C2F43F2D6009B4DC4 /* KYCVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */; };
+		6A665D4D2F43F2D6009B4DC4 /* KYCSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */; };
 		6A7C3A362F3E59F800F658D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A342F3E59F800F658D8 /* User.swift */; };
 		6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A322F3E59F800F658D8 /* Post.swift */; };
 		6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A312F3E59F800F658D8 /* Comment.swift */; };
@@ -94,6 +98,7 @@
 		6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
 		6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordStep.swift; sourceTree = "<group>"; };
 		6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationView.swift; sourceTree = "<group>"; };
+		D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCirclesIntroView.swift; sourceTree = "<group>"; };
 		6A2C7F712F3955C900BA430D /* LegalStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalStep.swift; sourceTree = "<group>"; };
 		6A2C7F722F3955C900BA430D /* NameStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameStep.swift; sourceTree = "<group>"; };
 		6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
@@ -129,6 +134,9 @@
 		6A5649852F3E522500BB0C4D /* StatusPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPill.swift; sourceTree = "<group>"; };
 		6A5649862F3E522500BB0C4D /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		6A5649872F3E522500BB0C4D /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
+		6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadCard.swift; sourceTree = "<group>"; };
+		6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCSteps.swift; sourceTree = "<group>"; };
+		6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCVerificationView.swift; sourceTree = "<group>"; };
 		6A7C3A302F3E59F800F658D8 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		6A7C3A312F3E59F800F658D8 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		6A7C3A322F3E59F800F658D8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -216,6 +224,9 @@
 		9395D68EAE724D079909AAA9 /* TANDA */ = {
 			isa = PBXGroup;
 			children = (
+				6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */,
+				6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */,
+				6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */,
 				6A9271382F3AF67800A321FE /* Fonts */,
 				C329120D2ED64C849C5ACDF2 /* App */,
 				A2A713275F9A46CCA28FBE69 /* Tokens */,
@@ -266,6 +277,7 @@
 				6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */,
 				6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */,
 				6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */,
+				D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */,
 				6A2C7F712F3955C900BA430D /* LegalStep.swift */,
 				6A2C7F722F3955C900BA430D /* NameStep.swift */,
 				6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */,
@@ -412,6 +424,7 @@
 				6A7C3A362F3E59F800F658D8 /* User.swift in Sources */,
 				6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */,
 				6A7C3A8A2F3E9FBE00F658D8 /* MemberCard.swift in Sources */,
+				6A665D492F43F2C5009B4DC4 /* ImageUploadCard.swift in Sources */,
 				6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */,
 				6A7C3A392F3E59F800F658D8 /* Transaction.swift in Sources */,
 				6A7C3A3A2F3E59F800F658D8 /* Circle.swift in Sources */,
@@ -433,6 +446,7 @@
 				6A7C3A552F3E5B3500F658D8 /* CircleMockData.swift in Sources */,
 				6A7C3A562F3E5B3500F658D8 /* TransactionMockData.swift in Sources */,
 				6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */,
+				55E86FB2F7B2401DB5313B56 /* ExploreCirclesIntroView.swift in Sources */,
 				6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */,
 				6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */,
 				6A2C7F872F3955C900BA430D /* Divider.swift in Sources */,
@@ -441,6 +455,8 @@
 				6A2C7F8A2F3955C900BA430D /* AuthButton.swift in Sources */,
 				6A2C7F8B2F3955C900BA430D /* PasswordLoginSheet.swift in Sources */,
 				6A2C7F8C2F3955C900BA430D /* CelebrationView.swift in Sources */,
+				6A665D4C2F43F2D6009B4DC4 /* KYCVerificationView.swift in Sources */,
+				6A665D4D2F43F2D6009B4DC4 /* KYCSteps.swift in Sources */,
 				6A2C7F8D2F3955C900BA430D /* OnboardingSplash.swift in Sources */,
 				6A2C7F8E2F3955C900BA430D /* Checkbox.swift in Sources */,
 				6A2C7F8F2F3955C900BA430D /* OTPInput.swift in Sources */,

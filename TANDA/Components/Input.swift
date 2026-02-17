@@ -13,6 +13,7 @@ struct Input: View {
         case amount
         case password
         case search
+        case ssn
     }
 
     enum InputStyle {
@@ -248,6 +249,7 @@ struct Input: View {
         case .amount: return .decimalPad
         case .password: return .default
         case .search: return .default
+        case .ssn: return .numberPad
         }
     }
 }

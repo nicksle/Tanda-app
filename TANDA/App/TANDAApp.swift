@@ -33,6 +33,15 @@ class AppState: ObservableObject {
     @Published var surveyResponses: [String: [String]] = [:]
     @Published var surveySkipped: Bool = false
 
+    // KYC Verification State
+    @Published var isKYCVerified: Bool = false
+
+    // Circles Intro State
+    @Published var hasSeenCirclesIntro: Bool = false
+
+    // Tab Navigation State
+    @Published var selectedTab: TabItem = .home
+
     // Social Feed State
     @Published var currentUser: User = MockData.feedUsers[4]  // Sarah Kim
     @Published var posts: [Post] = MockData.samplePosts
@@ -65,6 +74,21 @@ class AppState: ObservableObject {
             authEmail = ""
             isExistingAccount = false
         }
+    }
+
+    // MARK: - KYC Verification
+
+    func completeKYCVerification() {
+        isKYCVerified = true
+        // In production, this would trigger backend verification process
+        print("KYC verification submitted for user: \(currentUser.name)")
+    }
+
+    // MARK: - Circles Intro
+
+    func completeCirclesIntro() {
+        hasSeenCirclesIntro = true
+        print("Circles intro completed for user: \(currentUser.name)")
     }
 
     // MARK: - Social Feed Actions

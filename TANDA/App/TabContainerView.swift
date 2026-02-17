@@ -5,14 +5,13 @@ import SwiftUI
 
 struct TabContainerView: View {
     @EnvironmentObject var appState: AppState
-    @State private var selectedTab: TabItem = .home  // Start on home tab
 
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: $appState.selectedTab) {
             // Home Tab
             SocialFeedView()
                 .tabItem {
-                    Image(systemName: selectedTab == .home ? "house.fill" : "house")
+                    Image(systemName: appState.selectedTab == .home ? "house.fill" : "house")
                     Text("Home")
                 }
                 .tag(TabItem.home)
@@ -28,7 +27,7 @@ struct TabContainerView: View {
             // Transactions Tab
             PlaceholderTabView(title: "Transactions", icon: "dollarsign.circle.fill")
                 .tabItem {
-                    Image(systemName: selectedTab == .transactions ? "dollarsign.circle.fill" : "dollarsign.circle")
+                    Image(systemName: appState.selectedTab == .transactions ? "dollarsign.circle.fill" : "dollarsign.circle")
                     Text("Transactions")
                 }
                 .tag(TabItem.transactions)
@@ -36,7 +35,7 @@ struct TabContainerView: View {
             // Profile Tab
             PlaceholderTabView(title: "Profile", icon: "person.circle.fill")
                 .tabItem {
-                    Image(systemName: selectedTab == .profile ? "person.circle.fill" : "person.circle")
+                    Image(systemName: appState.selectedTab == .profile ? "person.circle.fill" : "person.circle")
                     Text("Profile")
                 }
                 .tag(TabItem.profile)
