@@ -12,12 +12,12 @@
 		48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F56501413E34386A09B826D /* PageView.swift */; };
 		499CAECE07C5440D937BF241 /* SheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425AAA88C9DE4EB7B8A49091 /* SheetLayout.swift */; };
 		539A8C189E194092B2062B96 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CBD829BAE84196A13F68DC /* Input.swift */; };
+		55E86FB2F7B2401DB5313B56 /* ExploreCirclesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */; };
 		6A2C7F802F3955C900BA430D /* TANDAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F792F3955C900BA430D /* TANDAApp.swift */; };
 		6A2C7F812F3955C900BA430D /* LegalStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F712F3955C900BA430D /* LegalStep.swift */; };
 		6A2C7F822F3955C900BA430D /* NameStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F722F3955C900BA430D /* NameStep.swift */; };
 		6A2C7F832F3955C900BA430D /* PasswordStrengthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F762F3955C900BA430D /* PasswordStrengthBar.swift */; };
 		6A2C7F842F3955C900BA430D /* EmailVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */; };
-		55E86FB2F7B2401DB5313B56 /* ExploreCirclesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */; };
 		6A2C7F852F3955C900BA430D /* PhotoStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F772F3955C900BA430D /* PhotoStep.swift */; };
 		6A2C7F862F3955C900BA430D /* SignUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F782F3955C900BA430D /* SignUpSheet.swift */; };
 		6A2C7F872F3955C900BA430D /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2C7F7D2F3955C900BA430D /* Divider.swift */; };
@@ -51,9 +51,9 @@
 		6A5649992F3E522500BB0C4D /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649862F3E522500BB0C4D /* TabBar.swift */; };
 		6A56499A2F3E522500BB0C4D /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5649872F3E522500BB0C4D /* TransactionRow.swift */; };
 		6A56499B2F3E522500BB0C4D /* PostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A56497F2F3E522500BB0C4D /* PostHeader.swift */; };
-		6A665D492F43F2C5009B4DC4 /* ImageUploadCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */; };
-		6A665D4C2F43F2D6009B4DC4 /* KYCVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */; };
-		6A665D4D2F43F2D6009B4DC4 /* KYCSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */; };
+		1B20852D82BB4BCA85F25708 /* KYCVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D172B2DEB64987BDEFDCF2 /* KYCVerificationView.swift */; };
+		F0514022CF184C2B8E4CF847 /* KYCSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498192B1EE94062AF27A116 /* KYCSteps.swift */; };
+		08E422D055EA4534A61DED96 /* ImageUploadCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EFBEFABCC34FD3B9A9B991 /* ImageUploadCard.swift */; };
 		6A7C3A362F3E59F800F658D8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A342F3E59F800F658D8 /* User.swift */; };
 		6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A322F3E59F800F658D8 /* Post.swift */; };
 		6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C3A312F3E59F800F658D8 /* Comment.swift */; };
@@ -98,7 +98,6 @@
 		6A2C7F6E2F3955C900BA430D /* CelebrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CelebrationView.swift; sourceTree = "<group>"; };
 		6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordStep.swift; sourceTree = "<group>"; };
 		6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailVerificationView.swift; sourceTree = "<group>"; };
-		D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCirclesIntroView.swift; sourceTree = "<group>"; };
 		6A2C7F712F3955C900BA430D /* LegalStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegalStep.swift; sourceTree = "<group>"; };
 		6A2C7F722F3955C900BA430D /* NameStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameStep.swift; sourceTree = "<group>"; };
 		6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerView.swift; sourceTree = "<group>"; };
@@ -134,9 +133,9 @@
 		6A5649852F3E522500BB0C4D /* StatusPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPill.swift; sourceTree = "<group>"; };
 		6A5649862F3E522500BB0C4D /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		6A5649872F3E522500BB0C4D /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
-		6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadCard.swift; sourceTree = "<group>"; };
-		6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCSteps.swift; sourceTree = "<group>"; };
-		6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCVerificationView.swift; sourceTree = "<group>"; };
+		83D172B2DEB64987BDEFDCF2 /* KYCVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCVerificationView.swift; sourceTree = "<group>"; };
+		4498192B1EE94062AF27A116 /* KYCSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KYCSteps.swift; sourceTree = "<group>"; };
+		B5EFBEFABCC34FD3B9A9B991 /* ImageUploadCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadCard.swift; sourceTree = "<group>"; };
 		6A7C3A302F3E59F800F658D8 /* Circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		6A7C3A312F3E59F800F658D8 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		6A7C3A322F3E59F800F658D8 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -164,6 +163,7 @@
 		82E49CCA0A594AA2AA73E24D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B060CC99DF434FB48AFC529B /* TANDAColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TANDAColors.swift; sourceTree = "<group>"; };
 		BAB33DAA41C449B98E32AD49 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCirclesIntroView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,9 +224,6 @@
 		9395D68EAE724D079909AAA9 /* TANDA */ = {
 			isa = PBXGroup;
 			children = (
-				6A665D4A2F43F2D6009B4DC4 /* KYCSteps.swift */,
-				6A665D4B2F43F2D6009B4DC4 /* KYCVerificationView.swift */,
-				6A665D482F43F2C5009B4DC4 /* ImageUploadCard.swift */,
 				6A9271382F3AF67800A321FE /* Fonts */,
 				C329120D2ED64C849C5ACDF2 /* App */,
 				A2A713275F9A46CCA28FBE69 /* Tokens */,
@@ -278,6 +275,8 @@
 				6A2C7F6F2F3955C900BA430D /* CreatePasswordStep.swift */,
 				6A2C7F702F3955C900BA430D /* EmailVerificationView.swift */,
 				D018F79436F54921883352FC /* ExploreCirclesIntroView.swift */,
+				83D172B2DEB64987BDEFDCF2 /* KYCVerificationView.swift */,
+				4498192B1EE94062AF27A116 /* KYCSteps.swift */,
 				6A2C7F712F3955C900BA430D /* LegalStep.swift */,
 				6A2C7F722F3955C900BA430D /* NameStep.swift */,
 				6A2C7F732F3955C900BA430D /* OnboardingContainerView.swift */,
@@ -317,6 +316,7 @@
 				6A5649852F3E522500BB0C4D /* StatusPill.swift */,
 				6A5649862F3E522500BB0C4D /* TabBar.swift */,
 				6A5649872F3E522500BB0C4D /* TransactionRow.swift */,
+				B5EFBEFABCC34FD3B9A9B991 /* ImageUploadCard.swift */,
 				0AEC6AB176A4469CBB5C7093 /* PrimaryButton.swift */,
 				19CBD829BAE84196A13F68DC /* Input.swift */,
 				6F56501413E34386A09B826D /* PageView.swift */,
@@ -424,13 +424,15 @@
 				6A7C3A362F3E59F800F658D8 /* User.swift in Sources */,
 				6A7C3A372F3E59F800F658D8 /* Post.swift in Sources */,
 				6A7C3A8A2F3E9FBE00F658D8 /* MemberCard.swift in Sources */,
-				6A665D492F43F2C5009B4DC4 /* ImageUploadCard.swift in Sources */,
 				6A7C3A382F3E59F800F658D8 /* Comment.swift in Sources */,
 				6A7C3A392F3E59F800F658D8 /* Transaction.swift in Sources */,
 				6A7C3A3A2F3E59F800F658D8 /* Circle.swift in Sources */,
 				6A5649992F3E522500BB0C4D /* TabBar.swift in Sources */,
 				6A56499A2F3E522500BB0C4D /* TransactionRow.swift in Sources */,
 				6A56499B2F3E522500BB0C4D /* PostHeader.swift in Sources */,
+				1B20852D82BB4BCA85F25708 /* KYCVerificationView.swift in Sources */,
+				F0514022CF184C2B8E4CF847 /* KYCSteps.swift in Sources */,
+				08E422D055EA4534A61DED96 /* ImageUploadCard.swift in Sources */,
 				48DDAA386F9B4CDFA600A00E /* PageView.swift in Sources */,
 				6A7C3A8E2F3EAEAF00F658D8 /* PaymentScheduleSection.swift in Sources */,
 				6A7C3A8F2F3EAEAF00F658D8 /* PaymentDateCard.swift in Sources */,
@@ -455,8 +457,6 @@
 				6A2C7F8A2F3955C900BA430D /* AuthButton.swift in Sources */,
 				6A2C7F8B2F3955C900BA430D /* PasswordLoginSheet.swift in Sources */,
 				6A2C7F8C2F3955C900BA430D /* CelebrationView.swift in Sources */,
-				6A665D4C2F43F2D6009B4DC4 /* KYCVerificationView.swift in Sources */,
-				6A665D4D2F43F2D6009B4DC4 /* KYCSteps.swift in Sources */,
 				6A2C7F8D2F3955C900BA430D /* OnboardingSplash.swift in Sources */,
 				6A2C7F8E2F3955C900BA430D /* Checkbox.swift in Sources */,
 				6A2C7F8F2F3955C900BA430D /* OTPInput.swift in Sources */,
